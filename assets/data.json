@@ -1,18 +1,18 @@
 {
 	"navMain": [{
-		"url": "/index.html",
+		"url": "index.html",
 		"text": "Home"
 	}, {
-		"url": "/nieuws.html",
+		"url": "nieuws.html",
 		"text": "Nieuws"
 	}, {
-		"url": "/vorming.html",
+		"url": "vorming.html",
 		"text": "Vorming en activiteiten"
 	}, {
-		"url": "/thema-en-aanpak.html",
+		"url": "thema-en-aanpak.html",
 		"text": "Thema's en aanpak"
 	}, {
-		"url": "/tools.html",
+		"url": "tools.html",
 		"text": "Tools"
 	}],
 	"navTop": [{
