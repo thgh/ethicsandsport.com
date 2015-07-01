@@ -2,14 +2,14 @@
 .divider-top {
 	border-top: 1px solid $line-color;
 }
+.home-activities {
+	border-top: 1px solid $line-color;
+}
+.home-tools {
+	border-top: 1px solid $line-color;
+	text-align: center;
+}
 #home {
-	.home-activities {
-		border-top: 1px solid $line-color;
-	}
-	.home-tools {
-		border-top: 1px solid $line-color;
-		text-align: center;
-	}
 	h2 {
 		text-align: center;
 	}
