@@ -1,0 +1,25 @@
+.news-grid-item {
+	padding: $gutter;
+}
+.news-container {
+	padding: 0 $gutter;
+	.grid-3 {
+		margin-left: -$gutter;
+		margin-right: -$gutter;
+	}
+}
+$news-item-width:300px + 2*$gutter;
+@media (min-width: $screen-sm-min) {
+	.news-container {
+    margin: 0 auto;
+		width: 2*$news-item-width;
+	}
+}
+@media (min-width: $screen-lg-min) {
+	.news-container {
+		width: 3*$news-item-width;
+	}
+}
+main#news{
+  padding-top: $gutter;
+}

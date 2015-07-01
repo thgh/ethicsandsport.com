@@ -1,0 +1,139 @@
+// html,
+// body {
+// 	font-family: 'Open Sans', sans-serif;
+//   margin: 0;
+//   padding: 0;
+// }
+// header{
+//   h1{
+//     margin: 0;
+//     padding-top: 1rem;
+//   }
+//   p{
+//     margin: 0;
+//     padding-bottom: 1rem;
+//   }
+// }
+body {
+	font-family: "Open Sans", "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", sans-serif;
+}
+header {
+	line-height: 60px;
+	font-family: Exo, sans-serif;
+	text-transform: uppercase;
+	background-color: $brand;
+	button {
+		border: 0;
+		padding: 0;
+		background: none;
+		color: #fff;
+	}
+}
+h1 {
+
+	//temp
+	color: #fff;
+	text-align: center;
+
+	// well
+	margin: 0;
+	width: 120px;
+	height: 60px;
+	background: $brand;
+	float: right;
+}
+h2 {
+	font-weight: 200;
+	font-size: 32px;
+}
+nav {
+	line-height: 30px;
+	ul {
+		padding: 0;
+		margin: 0;
+	}
+	li {
+		display: inline-block;
+	}
+	a {
+		display: block;
+		padding: 15px;
+		color: #fff;
+	}
+}
+figure>img {
+	// max-width: 100%;
+	// height: auto;
+	background: #eee;
+}
+input,
+textarea {
+	&::-webkit-input-placeholder {
+		color: #fff;
+	}
+	&:-moz-placeholder {
+		color: #fff;
+		opacity: 1;
+	}
+	&::-moz-placeholder {
+		color: #fff;
+		opacity: 1;
+	}
+	&:-ms-input-placeholder {
+		color: #fff;
+	}
+}
+
+// Header
+header button {
+	display: block;
+	margin: 0;
+	width: 60px;
+	height: 60px;
+	font-size: 21px;
+	line-height: 30px;
+}
+.search-form {
+	width: 100%;
+	background: $brand-dark;
+	button {
+		float: left;
+	}
+	input {
+		background: transparent;
+		border: 0;
+		outline: 0;
+		height: 60px;
+		padding-left: $gutter;
+		color: #fff;
+		text-transform: uppercase;
+	}
+}
+@media (min-width: $screen-sm-min) {
+	header {
+		background-color: white;
+	}
+
+	// Header - nav
+	.nav-top {
+		flex-grow: 1;
+		background-color: $brand;
+		text-align: right;
+	}
+	.search-form {
+		width: calc(20%);
+		min-width: 200px;
+		input {
+			width: 140px;
+		}
+	}
+	.nav-main {
+		width: 100%;
+		text-align: center;
+		line-height: 60px;
+		font-size: 1.25em;
+		a {
+			color: $brand;
+		}
+	}
+}

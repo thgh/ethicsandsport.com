@@ -1,0 +1,91 @@
+{% extends "partials/layout.html" %} {% block content %}
+<div class="grid-2">
+	<div class="area bg-alt-light">
+		<h2>Bekijk
+			<br>onze thema's</h2>
+		<p>
+			<button type="button" name="button">Meer</button>
+		</p>
+	</div>
+	<divdiv class="area bg-alt-dark">
+		<h2>Bekijk
+			<br>onze aanpakken</h2>
+		<p>
+			<button type="button" name="button">Meer</button>
+		</p>
+</div>
+</div>
+
+<main id="home" class="main">
+	<div class="grid-3">
+		<section class="home-news" id="news">
+			<h2 class="container">Nieuws</h2>
+			<div class="container divider-top">
+				{% for item in news.slice('0', '3') %}
+				<div class="news-list-item">
+					<figure>
+						<img alt="" src="{{ item.thumb }}" height="100px" width="100px" />
+					</figure>
+					<div>
+						<h3>{{ item.title }}</h3>
+						<p>
+							<time datetime="{{ item.date }}">{{ item.date }}</time>
+						</p>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</section>
+		<section class="home-activities" id="activities">
+			<h2 class="container">Activiteiten</h2>
+			<div class="container divider-top">
+				{% for activity in activities.slice('0', '3') %}
+				<div class="activity-list-item">
+					<time datetime="{{ activity.date }}">
+						<b>{{ activity.date | replace("^(..).*", "$1") }}</b>
+						{{ activity.date | replace("^...(...)..(..).*", "$1$2") }}
+					</time>
+					<div class="">
+						<h3>{{ activity.title }}</h3>
+						<p>
+							{{ activity.location }}
+						</p>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</section>
+		<section class="home-tools divider-top" id="tools">
+			<h2 class="container">
+				Tools
+			</h2>
+			<div class="container divider-top">
+				<div class="illustrated">
+					<figure>
+						<img alt="" src="assets/img/shower.png" />
+					</figure>
+					<div>
+						<h3>Grensoverschrijdend gedrag</h3>
+						<p>
+							Wat doe je als een sporter stiekem foto's trekt van meisjes onder de douche?
+						</p>
+						<p>
+							<a href="tools.html">Lees meer over onze tools</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</main>
+<div class="social-wrapper visible-sm visible-md visible-lg">
+	<div class="grid-2 main">
+		<section id="twitter">
+			<figure/>
+		</section>
+		<section id="facebook">
+			<figure/>
+		</section>
+	</div>
+</div>
+{% endblock %}

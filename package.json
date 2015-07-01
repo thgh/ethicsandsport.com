@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-livereload": "*",
+    "gulp-connect": "*",
+    "gulp-data":"*",
+    "gulp-swig":"*",
+    "gulp-sass": "~2.0.1"
+  }
+}

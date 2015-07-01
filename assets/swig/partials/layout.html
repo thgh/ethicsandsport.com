@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta content="ie=edge" http-equiv="x-ua-compatible">
+	<title>{% block title %}Title{% endblock %}</title>
+	<meta content="" name="description">
+	<meta content="width=device-width, initial-scale=1" name="viewport"> {% block head %}
+	<link href="assets/css/screen.css" rel="stylesheet"> {% endblock %}
+</head>
+
+<body>
+	<header>
+		<div class="header-xs">
+			<a href="#">
+				<h1>ICES</h1>
+			</a>
+			<button type="button"><i class="glyphicon glyphicon-menu-hamburger"></i>
+				<span class="text-hide">Navigation</span>
+			</button>
+			{% include "search-form.html" %}
+		</div>
+		<div class="header-sm">
+			<a href="#">
+				<h1>ICES</h1>
+			</a>
+			{% include "nav-top.html" %} {% include "search-form.html" %}
+			<br> {% include "nav-main.html" %}
+		</div>
+	</header>
+	{% block content %} {% endblock %}
+	<section class="newsletter" id="newsletter">
+		<form>
+			<h2>
+				Op de hoogte blijven van onze activiteiten?
+			</h2>
+			<p>
+				<label for="mail">
+					Schrijf je in op onze nieuwsbrief
+				</label>
+			</p>
+			<p>
+				<input id="mail" name="mail" placeholder="E-mailadres" type="email" value="">
+			</p>
+			<p>
+				<button name="button" type="submit">
+					Verstuur
+				</button>
+			</p>
+		</form>
+	</section>
+	<footer class="pageFooter">
+		<p>
+			<a class="icon" href="facebook">Facebook</a>
+			<a class="icon" href="twitter">Twitter</a>
+		</p>
+		<p>
+			&copy; 2015 Alle rechten voorbehouden.
+			<br> Opgemaakt door ICES vzw, Waterkluiskaai 17, 9040 Sint-Amandsberg/Gent
+			<br> Tel: 09 218 91 24
+			<br>
+			<a href="mailto:info@ethicsandsport.com">info@ethicsandsport.com</a>
+		</p>
+		<p class="first-sm">
+			<img alt="" src="assets/img/vlaanderen.png" />
+		</p>
+	</footer>
+	<div class="hide">
+		{% include "nav-mobile.html" %}
+	</div>
+</body>
+
+</html>

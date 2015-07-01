@@ -1,0 +1,12 @@
+<nav class="nav-mobile">
+	<ul>
+		{% for item in navMain %}
+		<li><a href="{{ item.url }}">{{ item.text }}</a></li>
+		{% endfor %}
+	</ul>
+	<ul>
+		{% for item in navTop %}
+		<li><a href="{{ item.url }}">{{ item.text }}</a></li>
+		{% endfor %}
+	</ul>
+</nav>

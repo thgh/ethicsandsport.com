@@ -1,0 +1,22 @@
+{
+  "html": {
+    "allowed_file_extensions": ["htm", "html", "hbt", "shtml", "xml", "svg", "razr", "php"],
+    "indent_with_tabs": true,
+    "indent_char": "\t",
+    "indent_size": 1,
+    "end_with_newline": true
+  },
+  "js": {
+    "indent_with_tabs": true,
+    "indent_char": "\t",
+    "indent_size": 1,
+    "end_with_newline": true
+  },
+  "css": {
+    "allowed_file_extensions": ["css", "scss", "sass", "less", "styl"],
+    "indent_with_tabs": true,
+    "indent_char": "\t",
+    "indent_size": 1,
+    "end_with_newline": true
+  }
+}

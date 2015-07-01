@@ -1,0 +1,28 @@
+// Variables
+$text-color: rgb(51, 51, 51);
+$back-color: #fff;
+$gutter: 15px;
+
+// Variables - Branding colors
+$brand: rgb(122, 138, 42);
+$brand-light: rgb(183, 206, 99);
+$brand-dark: rgb(90, 106, 24);
+$alt-light: rgb(117, 187, 167);
+$alt-dark: rgb(44, 74, 74);
+$neutral-light: rgb(217, 217, 217);
+$line-color: rgb(209, 209, 209);
+
+// Imports
+@import 'fonts';
+@import 'bootstrap';
+
+// Mostly HTML tags
+@import 'base';
+
+// Layout classes
+@import 'structure';
+@import 'helpers';
+
+// Specific pages
+@import 'home';
+@import 'pages';

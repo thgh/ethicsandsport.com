@@ -1,0 +1,7 @@
+<nav class="nav-top">
+	<ul>
+		{% for item in navTop %}
+		<li><a href="{{ item.url }}">{{ item.text }}</a></li>
+		{% endfor %}
+	</ul>
+</nav>

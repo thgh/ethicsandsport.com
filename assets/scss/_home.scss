@@ -1,0 +1,141 @@
+// Dividers
+.divider-top {
+	border-top: 1px solid $line-color;
+}
+#home {
+	.home-activities {
+		border-top: 1px solid $line-color;
+	}
+	.home-tools {
+		border-top: 1px solid $line-color;
+		text-align: center;
+	}
+	h2 {
+		text-align: center;
+	}
+}
+@media (min-width: $screen-sm-min) {
+	.home-activities {
+		border-top: 0;
+		border-left: 1px solid $line-color;
+	}
+	.home-news,
+	.home-activities {
+		h2 {
+			text-align: left;
+		}
+	}
+	.area {
+		font-size: 18px;
+	}
+}
+@media (min-width: $screen-lg-min) {
+	.home-tools {
+		border-top: 0;
+		border-left: 1px solid $line-color;
+		h2 {
+			text-align: left;
+		}
+	}
+	.area {
+		font-size: 20px;
+	}
+}
+
+// Placeholder
+.area {
+	min-height: 15em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-family: Exo, sans-serif;
+	h2 {
+		margin-bottom: 0;
+		font-size: 2.5em;
+		line-height: 1.2;
+	}
+	button {
+		display: block;
+		width: 4em;
+		height: 4em;
+		border: 1px solid #fff;
+		border-radius: 50%;
+		text-transform: uppercase;
+		background: none;
+		margin-bottom: 2em;
+	}
+}
+
+// Color helpers
+.bg-alt-light {
+	background: $alt-light;
+	color: white;
+}
+.bg-alt-dark {
+	background: $alt-dark;
+	color: white;
+}
+
+// News
+.news-list-item {
+	margin: $gutter 0;
+	@include clearfix;
+	&>figure {
+		float: left;
+	}
+	&>div {
+		margin-left: 100px + $gutter;
+	}
+	h3 {
+		margin-top: 0;
+	}
+}
+
+// News
+.activity-list-item {
+	margin: $gutter 0;
+	@include clearfix;
+	&>time {
+		float: left;
+		width: 64px;
+		text-align: center;
+		line-height: 40px;
+		font-family: Exo;
+		font-size: 20px;
+		font-weight: 500;
+		background: $brand-light;
+		b {
+			display: block;
+			line-height: 60px;
+			font-size: 30px;
+			font-weight: 300;
+			background: $brand;
+			color: #fff;
+		}
+	}
+	&>div {
+		margin-left: 64px + $gutter;
+	}
+	h3 {
+		margin-top: 0;
+	}
+}
+
+// Social media iframes
+.social-wrapper {
+	background: #999;
+	padding-top: $gutter;
+	padding-bottom: $gutter;
+	section {
+		padding: $gutter;
+	}
+	figure {
+		background: $neutral-light;
+		height: 300px;
+	}
+}
+.newsletter {
+	text-align: center;
+}

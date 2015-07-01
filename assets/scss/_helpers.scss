@@ -1,0 +1,17 @@
+.icon {
+	font-size: 0;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	background: $brand-dark;
+	margin: 0 $gutter/2;
+	border-radius: 50%;
+	&:hover {
+		background: #000;
+	}
+}
+.illustrated {
+	text-align: center;
+	padding: $gutter*2 0;
+	align-items: center;
+}

@@ -1,0 +1,297 @@
+{
+	"navMain": [{
+		"url": "/index.html",
+		"text": "Home"
+	}, {
+		"url": "/nieuws.html",
+		"text": "Nieuws"
+	}, {
+		"url": "/vorming.html",
+		"text": "Vorming en activiteiten"
+	}, {
+		"url": "/thema-en-aanpak.html",
+		"text": "Thema's en aanpak"
+	}, {
+		"url": "/tools.html",
+		"text": "Tools"
+	}],
+	"navTop": [{
+		"url": "#",
+		"text": "Over ICES"
+	}, {
+		"url": "#",
+		"text": "Nieuwsbrief"
+	}, {
+		"url": "#",
+		"text": "Contact"
+	}, {
+		"url": "#",
+		"text": "In English?"
+	}],
+	"news": [{
+		"index": 0,
+		"title": "esse nisi fugiat enim fugiat",
+		"thumb": "http://placehold.it/100x100",
+		"picture": "http://placehold.it/300x200",
+		"excerpt": "Et nisi commodo occaecat cillum magna labore. Laboris proident culpa exercitation laborum ullamco dolor pariatur.",
+		"date": "03/01/2015",
+		"tags": [
+			"labore",
+			"veniam"
+		],
+		"author": {
+			"first": "Barlow",
+			"last": "Ball"
+		}
+	}, {
+		"index": 1,
+		"title": "enim dolor incididunt dolore cupidatat",
+		"thumb": "http://placehold.it/100x100",
+		"picture": "http://placehold.it/300x200",
+		"excerpt": "Ut sunt est occaecat ea consequat commodo minim. Duis magna ipsum et magna.",
+		"date": "16/03/2015",
+		"tags": [
+			"ad",
+			"ad"
+		],
+		"author": {
+			"first": "Cecilia",
+			"last": "Compton"
+		}
+	}, {
+		"index": 2,
+		"title": "est deserunt exercitation adipisicing aute",
+		"thumb": "http://placehold.it/100x100",
+		"picture": "http://placehold.it/300x200",
+		"excerpt": "Est aliquip ullamco aliqua sint laboris proident qui. Incididunt sint ipsum cillum esse cillum quis aute.",
+		"date": "17/04/2015",
+		"tags": [
+			"excepteur",
+			"id"
+		],
+		"author": {
+			"first": "Stacy",
+			"last": "Leblanc"
+		}
+	}, {
+		"index": 3,
+		"title": "anim nostrud sit laboris cupidatat",
+		"thumb": "http://placehold.it/100x100",
+		"picture": "http://placehold.it/300x200",
+		"excerpt": "Et est sint qui occaecat est. Et dolor magna veniam dolor.",
+		"date": "23/04/2015",
+		"tags": [
+			"qui",
+			"dolore"
+		],
+		"author": {
+			"first": "Preston",
+			"last": "Alston"
+		}
+	}, {
+		"index": 4,
+		"title": "enim incididunt sint ex id",
+		"thumb": "http://placehold.it/100x100",
+		"picture": "http://placehold.it/300x200",
+		"excerpt": "Irure occaecat deserunt sint sunt. Dolore ipsum officia nisi eu reprehenderit anim minim eu anim nulla ad occaecat adipisicing ullamco.",
+		"date": "10/04/2015",
+		"tags": [
+			"pariatur",
+			"voluptate"
+		],
+		"author": {
+			"first": "Jacqueline",
+			"last": "Mathews"
+		}
+	}, {
+		"index": 5,
+		"title": "minim cupidatat pariatur exercitation do",
+		"thumb": "http://placehold.it/100x100",
+		"picture": "http://placehold.it/300x200",
+		"excerpt": "Occaecat cupidatat mollit officia do. Ullamco nulla deserunt consectetur nulla non qui.",
+		"date": "09/04/2015",
+		"tags": [
+			"do",
+			"ad"
+		],
+		"author": {
+			"first": "Black",
+			"last": "Webster"
+		}
+	}, {
+		"index": 6,
+		"title": "sit ullamco enim pariatur ad",
+		"thumb": "http://placehold.it/100x100",
+		"picture": "http://placehold.it/300x200",
+		"excerpt": "Excepteur qui mollit minim aliqua Lorem ea elit est laboris. Aliquip consequat labore laborum esse ea cillum pariatur.",
+		"date": "05/03/2015",
+		"tags": [
+			"quis",
+			"nisi"
+		],
+		"author": {
+			"first": "Georgia",
+			"last": "Nguyen"
+		}
+	}, {
+		"index": 7,
+		"title": "laborum nulla eiusmod amet et",
+		"thumb": "http://placehold.it/100x100",
+		"picture": "http://placehold.it/300x200",
+		"excerpt": "Adipisicing eu culpa exercitation deserunt non ut amet id ea sit. Nisi et mollit duis irure sint.",
+		"date": "10/06/2015",
+		"tags": [
+			"ad",
+			"ex"
+		],
+		"author": {
+			"first": "Lorene",
+			"last": "Kelly"
+		}
+	}, {
+		"index": 8,
+		"title": "eu nulla voluptate ea ullamco",
+		"thumb": "http://placehold.it/100x100",
+		"picture": "http://placehold.it/300x200",
+		"excerpt": "Mollit ad excepteur nisi minim. Consequat mollit dolore eu exercitation cupidatat commodo ipsum elit mollit.",
+		"date": "06/06/2015",
+		"tags": [
+			"dolor",
+			"do"
+		],
+		"author": {
+			"first": "Floyd",
+			"last": "Sloan"
+		}
+	}, {
+		"index": 9,
+		"title": "velit eiusmod et commodo nisi",
+		"thumb": "http://placehold.it/100x100",
+		"picture": "http://placehold.it/300x200",
+		"excerpt": "Voluptate amet nisi labore qui nulla enim eiusmod proident dolore sint laboris. Sint eu amet dolor nisi dolore nisi non est dolore.",
+		"date": "05/05/2015",
+		"tags": [
+			"do",
+			"minim"
+		],
+		"author": {
+			"first": "Salinas",
+			"last": "Nelson"
+		}
+	}, {
+		"index": 10,
+		"title": "commodo mollit irure cupidatat anim",
+		"thumb": "http://placehold.it/100x100",
+		"picture": "http://placehold.it/300x200",
+		"excerpt": "Reprehenderit consectetur voluptate enim exercitation ad tempor ad magna. Esse incididunt ad id exercitation pariatur sint.",
+		"date": "29/05/2015",
+		"tags": [
+			"consequat",
+			"sunt"
+		],
+		"author": {
+			"first": "Florine",
+			"last": "Buck"
+		}
+	}, {
+		"index": 11,
+		"title": "aute anim enim reprehenderit eu",
+		"thumb": "http://placehold.it/100x100",
+		"picture": "http://placehold.it/300x200",
+		"excerpt": "Quis dolor voluptate officia sint non ipsum consectetur dolor. Ullamco esse quis sit cupidatat nulla.",
+		"date": "17/05/2015",
+		"tags": [
+			"in",
+			"pariatur"
+		],
+		"author": {
+			"first": "Lily",
+			"last": "Potter"
+		}
+	}],
+	"activities": [{
+		"index": 0,
+		"title": "adipisicing tempor exercitation esse veniam",
+		"location": "Securia",
+		"street": "Seagate Terrace",
+		"city": "Harviell",
+		"date": "12/03/2015"
+	}, {
+		"index": 1,
+		"title": "exercitation velit reprehenderit ullamco excepteur",
+		"location": "Xurban",
+		"street": "Alabama Avenue",
+		"city": "Fidelis",
+		"date": "10/03/2015"
+	}, {
+		"index": 2,
+		"title": "velit exercitation duis exercitation velit",
+		"location": "Unia",
+		"street": "Albee Square",
+		"city": "Idledale",
+		"date": "03/06/2015"
+	}, {
+		"index": 3,
+		"title": "nostrud laborum nisi esse cillum",
+		"location": "Hawkster",
+		"street": "Martense Street",
+		"city": "Washington",
+		"date": "03/05/2015"
+	}, {
+		"index": 4,
+		"title": "minim ullamco et cupidatat aliqua",
+		"location": "Zentry",
+		"street": "Thatford Avenue",
+		"city": "Hiseville",
+		"date": "05/05/2015"
+	}, {
+		"index": 5,
+		"title": "ullamco reprehenderit enim quis ipsum",
+		"location": "Enormo",
+		"street": "Fiske Place",
+		"city": "Weeksville",
+		"date": "25/02/2015"
+	}, {
+		"index": 6,
+		"title": "id Lorem anim incididunt cillum",
+		"location": "Enaut",
+		"street": "Williams Place",
+		"city": "Gadsden",
+		"date": "03/03/2015"
+	}, {
+		"index": 7,
+		"title": "esse deserunt cupidatat adipisicing dolore",
+		"location": "Terrago",
+		"street": "Beverley Road",
+		"city": "Crawfordsville",
+		"date": "04/04/2015"
+	}, {
+		"index": 8,
+		"title": "excepteur sint reprehenderit do velit",
+		"location": "Tetak",
+		"street": "Grimes Road",
+		"city": "Noblestown",
+		"date": "04/03/2015"
+	}, {
+		"index": 9,
+		"title": "laborum incididunt duis amet duis",
+		"location": "Eventix",
+		"street": "Bergen Place",
+		"city": "Lloyd",
+		"date": "02/06/2015"
+	}, {
+		"index": 10,
+		"title": "reprehenderit nulla Lorem labore ex",
+		"location": "Exospeed",
+		"street": "Ridgewood Place",
+		"city": "Kerby",
+		"date": "28/01/2015"
+	}, {
+		"index": 11,
+		"title": "aliquip elit ipsum qui incididunt",
+		"location": "Digiprint",
+		"street": "Irvington Place",
+		"city": "Snelling",
+		"date": "04/05/2015"
+	}]
+}
