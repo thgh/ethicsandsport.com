@@ -12,6 +12,34 @@
 }
 .illustrated {
 	text-align: center;
-	padding: $gutter*2 0;
+	padding: $gutter 0;
 	align-items: center;
+	h3 {
+		margin-top: $gutter;
+		font-size: 26px;
+		line-height: 1.25em;
+		color: $alt-light;
+	}
+	p{
+		margin: $gutter 0;
+	}
+	&>div{
+		max-width: 320px;
+		margin: 0 auto;
+	}
+}
+.link-block {
+	display: block;
+	cursor: pointer;
+	color: inherit;
+	&:hover,
+	&:focus {
+		color: inherit;
+		text-decoration: inherit;
+		outline: none;
+		h3 {
+			text-decoration: underline;
+			color: $brand-dark;
+		}
+	}
 }

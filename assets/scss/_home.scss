@@ -1,4 +1,33 @@
-// Dividers
+// home-cta
+.area {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	h2 {
+		margin: 0;
+		padding-top: 1em;
+		font-size: 28px;
+		font-weight: light;
+		line-height: 1.25em;
+	}
+	button {
+		display: block;
+		margin: 1em 0;
+		width: 65px;
+		height: 65px;
+		border: 1px solid #fff;
+		border-radius: 50%;
+		font-size: 25px;
+		font-weight: light;
+		font-family: $font-tall;
+		text-transform: uppercase;
+		background: none;
+	}
+}
+
+// Site overview: dividers and alignment
 .divider-top {
 	border-top: 1px solid $line-color;
 }
@@ -25,8 +54,8 @@
 			text-align: left;
 		}
 	}
-	.area {
-		font-size: 18px;
+	.area h2 {
+		font-size: 45px;
 	}
 }
 @media (min-width: $screen-lg-min) {
@@ -36,35 +65,6 @@
 		h2 {
 			text-align: left;
 		}
-	}
-	.area {
-		font-size: 20px;
-	}
-}
-
-// Placeholder
-.area {
-	min-height: 15em;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	font-family: Exo, sans-serif;
-	h2 {
-		margin-bottom: 0;
-		font-size: 2.5em;
-		line-height: 1.2;
-	}
-	button {
-		display: block;
-		width: 4em;
-		height: 4em;
-		border: 1px solid #fff;
-		border-radius: 50%;
-		text-transform: uppercase;
-		background: none;
-		margin-bottom: 2em;
 	}
 }
 
@@ -80,43 +80,46 @@
 
 // News
 .news-list-item {
-	margin: $gutter 0;
 	@include clearfix;
+	margin: $gutter 0;
+	line-height: 1.2em;
+	font-size: 14px;
+	font-weight: bold;
 	&>figure {
 		float: left;
 	}
 	&>div {
-		margin-left: 100px + $gutter;
-	}
-	h3 {
-		margin-top: 0;
+		margin-left: 100px + 0.6 * $gutter;
 	}
 }
 
 // News
 .activity-list-item {
-	margin: $gutter 0;
 	@include clearfix;
+	margin: $gutter 0;
+	line-height: 1.2em;
+	font-size: 14px;
+	font-weight: bold;
 	&>time {
 		float: left;
 		width: 64px;
 		text-align: center;
 		line-height: 40px;
-		font-family: Exo;
-		font-size: 20px;
-		font-weight: 500;
+		font-size: 26px;
+		font-family: $font-tall;
+		font-weight: 400;
 		background: $brand-light;
 		b {
 			display: block;
 			line-height: 60px;
-			font-size: 30px;
+			font-size: 40px;
 			font-weight: 300;
 			background: $brand;
 			color: #fff;
 		}
 	}
 	&>div {
-		margin-left: 64px + $gutter;
+		margin-left: 64px + 0.6 * $gutter;
 	}
 	h3 {
 		margin-top: 0;

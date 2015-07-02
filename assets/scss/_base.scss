@@ -1,25 +1,10 @@
-// html,
-// body {
-// 	font-family: 'Open Sans', sans-serif;
-//   margin: 0;
-//   padding: 0;
-// }
-// header{
-//   h1{
-//     margin: 0;
-//     padding-top: 1rem;
-//   }
-//   p{
-//     margin: 0;
-//     padding-bottom: 1rem;
-//   }
-// }
 body {
-	font-family: "Open Sans", "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", sans-serif;
+	font-family: Lato, sans-serif;
 }
 header {
 	line-height: 60px;
-	font-family: Exo, sans-serif;
+	font-size: 1.4em;
+	font-family: $font-tall;
 	text-transform: uppercase;
 	background-color: $brand;
 	button {
@@ -43,10 +28,18 @@ h1 {
 	float: right;
 }
 h2 {
-	font-weight: 200;
-	font-size: 32px;
+	font-weight: 300;
+	font-size: 30px;
 	line-height: 30px;
 	margin: 30px 0;
+}
+h3 {
+	margin: 0;
+	line-height: 1.2em;
+	font-size: 22px;
+	font-family: $font-tall;
+	text-transform: uppercase;
+	color: $brand;
 }
 nav {
 	line-height: 30px;
