@@ -1,7 +1,7 @@
 // home-cta
 .area {
-	display: flex;
-	flex-direction: column;
+	@include flexbox;
+	@include flex-direction(column);
 	justify-content: center;
 	align-items: center;
 	text-align: center;

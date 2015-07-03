@@ -111,7 +111,7 @@ header button {
 
 	// Header - nav
 	.nav-top {
-		flex-grow: 1;
+		@include flex(1);
 		background-color: $brand;
 		text-align: right;
 	}

@@ -3,9 +3,9 @@
 	padding-right: $gutter;
 }
 .grid-2 {
-	display: flex;
+	@include flexbox;
 	&>* {
-		flex: 1 0 50%;
+		@include flex(1, 0, 50%);
 	}
 }
 
@@ -18,10 +18,11 @@
 .header-sm {
 	display: none;
 	@media (min-width: $screen-sm-min) {
-		display: flex;
-		flex-wrap: wrap;
+		@include flexbox;
+		@include flex-wrap(wrap);
 	}
 }
+
 // breadcrumb
 .breadcrumb {
 	padding: $gutter;
@@ -49,8 +50,8 @@
 
 //Footer
 .pageFooter {
-	display: flex;
-	flex-direction: column;
+	@include flexbox;
+	@include flex-direction(column);
 	align-items: center;
 	justify-content: center;
 	padding: 2*$gutter $gutter;
@@ -80,15 +81,15 @@
 	}
 	.illustrated,
 	.grid-3 {
-		display: flex;
-		flex-wrap: wrap;
+		@include flexbox;
+		@include flex-wrap(wrap);
 		&>* {
-			flex: 1 0 50%;
+			@include flex(1, 0, 50%);
 		}
 	}
 	.pageFooter {
-		flex-direction: row;
-		flex-wrap: wrap;
+		@include flex-direction(row);
+		@include flex-wrap(wrap);
 		p {
 			text-align: left;
 		}
@@ -103,12 +104,12 @@
 	}
 	.grid-3 {
 		&>* {
-			flex: 0 0 calc( 100%/3 );
+				@include flex(0, 0, calc( 100%/3 ));
 		}
 	}
 	.illustrated {
 		&>* {
-			flex: 0 0 100%;
+			@include flex(1, 0, 100%);
 		}
 	}
 }
