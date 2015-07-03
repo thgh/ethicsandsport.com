@@ -45,7 +45,16 @@
 .newsletter {
 	padding: $gutter 0;
 	border-top: 1px solid $line-color;
+	text-align: center;
 	background: whitesmoke;
+	form {
+		margin: 0 auto;
+		max-width: 300px;
+		font-weight: 700;
+	}
+}
+.newsletter {
+
 }
 
 //Footer
@@ -104,7 +113,7 @@
 	}
 	.grid-3 {
 		&>* {
-				@include flex(0, 0, calc( 100%/3 ));
+			@include flex(0, 0, calc( 100%/3 ));
 		}
 	}
 	.illustrated {

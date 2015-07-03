@@ -34,22 +34,18 @@
 	</header>
 	{% block content %} {% endblock %}
 	<section class="newsletter" id="newsletter">
+		<h2>
+			Op de hoogte blijven van onze activiteiten?
+		</h2>
 		<form>
-			<h2>
-				Op de hoogte blijven van onze activiteiten?
-			</h2>
 			<p>
-				<label for="mail">
-					Schrijf je in op onze nieuwsbrief
-				</label>
+				<label for="mail">Schrijf je in op onze nieuwsbrief</label>
 			</p>
 			<p>
-				<input id="mail" name="mail" placeholder="E-mailadres" type="email" value="">
+				<input type="email" id="mail" name="mail" placeholder="E-mailadres" class="inp inp-neutral">
 			</p>
 			<p>
-				<button name="button" type="submit">
-					Verstuur
-				</button>
+				<button type="submit" class="btn btn-alt">Verstuur</button>
 			</p>
 		</form>
 	</section>

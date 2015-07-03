@@ -76,7 +76,6 @@ input[type="search"] {
 .list-unstyled {
   @include list-unstyled;
 }
-
 // undo a
 // a {
 // 	color: inherit;
@@ -89,15 +88,16 @@ input[type="search"] {
 // }
 .btn {
 	display: block;
+	width: 100%;
 	font-weight: $btn-font-weight;
-  font-family: $font-tall;
-  text-transform: uppercase;
+	font-family: $font-tall;
+	text-transform: uppercase;
 	text-align: center;
 	vertical-align: middle;
 	touch-action: manipulation;
 	cursor: pointer;
 	background-image: none;
-  	border: 0;
+	border: 0;
 	@include button-size(13px, 5px, 23px, 25px, 0);
 	@include user-select(none);
 	&,
@@ -130,9 +130,8 @@ input[type="search"] {
 
 	// [converter] extracted a& to a.btn
 }
-
-.btn-alt{
-  color: #fff;
-  background: $alt-light;
-  border-bottom: 6px solid $alt-shadow;
+.btn-alt {
+	color: #fff;
+	background: $alt-light;
+	border-bottom: 6px solid $alt-shadow;
 }
