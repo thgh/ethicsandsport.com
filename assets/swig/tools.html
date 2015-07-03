@@ -3,8 +3,37 @@
 {% extends "partials/layout.html" %}
 
 {% block content %}
-<main class="main" id="tools">
-	<h2>Tools</h2>
-	<div>ja</div>
-</main>
+<div class="divider-top">
+	<ol class="breadcrumb">
+		<li>
+			<a href="/">Home</a>
+		</li>
+		<li>
+			<a href="tools.html">Tools</a>
+		</li>
+	</ol>
+</div>
+<div class="divider-top">
+	<main class="main news-container" id="tools">
+		<h2 class="text-hide">Tools</h2>
+		<div class="grid-3">
+			{% for item in tools %}
+			<article class="news-grid-item">
+				<figure>
+					<img alt="" height="200px" src="{{ item.picture }}" width="300px"/>
+				</figure>
+				<div>
+					<h3>{{ item.title }}</h3>
+					<p>
+						<time datetime="{{ item.date }}">{{ item.date }}</time>
+					</p>
+					<p>
+						{{ item.excerpt }}
+					</p>
+				</div>
+			</article>
+			{% endfor %}
+		</div>
+	</main>
+</div>
 {% endblock %}

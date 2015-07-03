@@ -76,6 +76,10 @@ input[type="search"] {
 .list-unstyled {
   @include list-unstyled;
 }
+// better hide text
+.text-hide{
+  margin: 0;
+}
 // undo a
 // a {
 // 	color: inherit;

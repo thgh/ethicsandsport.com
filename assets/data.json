@@ -293,5 +293,28 @@
 		"street": "Irvington Place",
 		"city": "Snelling",
 		"date": "04/05/2015"
+	}],
+	"tools": [{
+		"title": "Ethische criteria voor een kwalitatief sportlabel",
+		"thumb": "http://placehold.it/100x100",
+		"picture": "assets/img/tool_criteria.png",
+		"excerpt": "Voluptate amet nisi labore qui nulla enim eiusmod proident dolore sint laboris. Sint eu amet dolor nisi dolore nisi non est dolore."
+
+	}, {
+		"title": "Sport met grenzen, beleidsinitiatieven",
+		"thumb": "http://placehold.it/100x100",
+		"picture": "assets/img/tool_ethischmgmt.png",
+		"excerpt": "Reprehenderit consectetur voluptate enim exercitation ad tempor ad magna. Esse incididunt ad id exercitation pariatur sint."
+
+	}, {
+		"title": "Is kiezen verliezen?",
+		"thumb": "http://placehold.it/100x100",
+		"picture": "assets/img/tool_kiezenverliezen.png",
+		"excerpt": "Quis dolor voluptate officia sint non ipsum consectetur dolor. Ullamco esse quis sit cupidatat nulla."
+	}, {
+		"title": "Sport met grenzen, vlaggensysteem",
+		"thumb": "http://placehold.it/100x100",
+		"picture": "assets/img/tool_sportmetgrenzen.png",
+		"excerpt": "Reprehenderit consectetur voluptate enim exercitation ad tempor ad magna. Esse incididunt ad id exercitation pariatur sint."
 	}]
 }
