@@ -2,8 +2,8 @@
 .area {
 	@include flexbox;
 	@include flex-direction(column);
-	justify-content: center;
-	align-items: center;
+	@include justify-content(center);
+	@include align-items(center);
 	text-align: center;
 	h2 {
 		margin: 0;

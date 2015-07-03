@@ -13,7 +13,7 @@
 .illustrated {
 	text-align: center;
 	padding: $gutter 0;
-	align-items: center;
+	@include align-items(center);
 	h3 {
 		margin-top: $gutter;
 		font-size: 26px;

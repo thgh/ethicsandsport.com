@@ -52,8 +52,8 @@
 .pageFooter {
 	@include flexbox;
 	@include flex-direction(column);
-	align-items: center;
-	justify-content: center;
+	@include justify-content(center);
+	@include align-items(center);
 	padding: 2*$gutter $gutter;
 	background: $brand;
 	color: rgba(#fff,.6);
