@@ -8,6 +8,14 @@
 		@include flex(1, 0, 50%);
 	}
 }
+@media (min-width: $screen-lg-min) {
+	.grid-lg-2 {
+		@include flexbox;
+		&>* {
+			@include flex(1, 0, 50%);
+		}
+	}
+}
 
 // Header visibility
 .header-xs {
@@ -25,7 +33,7 @@
 
 // breadcrumb
 .breadcrumb {
-	padding: $gutter;
+	padding: 15px $gutter;
 	margin: 0;
 	line-height: 30px;
 	list-style: none;
@@ -55,6 +63,86 @@
 }
 .newsletter {
 
+}
+
+// Article
+.article {
+
+	// Navigation
+	nav>ul {
+		padding: 0;
+		margin: 0;
+		border-right: 1px solid $line-color;
+		li {
+			display: block;
+		}
+		a {
+			display: block;
+			padding: 10px 0 10px $gutter;
+			line-height: 30px;
+			border-bottom: 1px solid $line-color;
+			color: $text-color;
+			&.active {
+				background: $brand;
+				color: #fff;
+			}
+			&:hover {
+				background: $brand-dark;
+				color: #fff;
+				text-decoration: none;
+			}
+		}
+	}
+}
+.article-content {
+	padding: 1px $gutter;
+	margin-bottom: ($gutter * 2);
+}
+.aside {
+	section {
+		padding: 1px $gutter;
+	}
+	ul {
+		padding-left: 20px;
+	}
+	section+section {
+		border-top: 1px solid $line-color;
+	}
+}
+@media (min-width: $screen-sm-min) {
+	.article {
+		nav>ul {
+			float: left;
+			width: 210px;
+		}
+	}
+	.article-content {
+		margin-left: 210px;
+	}
+}
+@media (min-width: $screen-lg-min) {
+	.article {
+
+		// Content
+		&>article {
+			float: left;
+			width: 890px;
+		}
+
+		// Content
+		.aside {
+			float: left;
+			width: 270px;
+		}
+	}
+	.aside {
+		section {
+			border-left: 1px solid $line-color;
+
+			//border-right: 1px solid $line-color;
+			padding: 1px 15px;
+		}
+	}
 }
 
 //Footer
@@ -119,6 +207,36 @@
 	.illustrated {
 		&>* {
 			@include flex(1, 0, 100%);
+		}
+	}
+}
+
+// Tablet styles
+@media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+	.grid-tablet-2 {
+		@include flexbox;
+		border-top: 1px solid $line-color;
+		&>* {
+			@include flex(1, 0, 50%);
+		}
+	}
+	.aside {
+		.btn {
+			max-width: 270px;
+			margin: 3 * $gutter auto;
+		}
+	}
+	.aside section+section {
+		border-top: 0;
+	}
+}
+
+// Mobile styles
+@media (max-width: $screen-xs-max) {
+	.aside {
+		.btn {
+			width: auto;
+			margin: $gutter;
 		}
 	}
 }

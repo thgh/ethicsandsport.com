@@ -1,9 +1,11 @@
 body {
 	font-family: Lato, sans-serif;
+	font-size: 16px;
+	line-height: 20px;
 }
 header {
 	line-height: 60px;
-	font-size: 1.4em;
+	font-size: 18px;
 	font-family: $font-tall;
 	text-transform: uppercase;
 	background-color: $brand;
@@ -42,6 +44,12 @@ h3 {
 	text-transform: uppercase;
 	color: $brand;
 }
+h4 {
+	margin: 15px 0;
+	line-height: 1.2em;
+	font-size: 22px;
+	font-weight: 300;
+}
 nav {
 	line-height: 30px;
 	ul {
@@ -61,7 +69,6 @@ nav {
 			border-color: inherit;
 		}
 		&.active {
-			pointer-events: none;
 			border-color: inherit;
 		}
 	}
@@ -75,6 +82,7 @@ nav {
 	}
 }
 figure>img {
+
 	// max-width: 100%;
 	// height: auto;
 	background: #eee;

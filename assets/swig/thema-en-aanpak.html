@@ -3,8 +3,43 @@
 {% extends "partials/layout.html" %}
 
 {% block content %}
+<div class="divider-bottom divider-top">
+	<ol class="breadcrumb">
+		<li>
+			<a href="/">Home</a>
+		</li>
+		<li>
+			Thema's en aanpak
+		</li>
+	</ol>
+</div>
 <main class="main">
-	<h2>Thema's en aanpakken</h2>
-	<div>ja</div>
+	<div class="grid-lg-2">
+		<article>
+			<h2>Thema's</h2>
+			<p>
+				Et nisi commodo occaecat cillum magna labore. Laboris proident culpa exercitation laborum ullamco dolor pariaturEt nisi commodo occaecat cillum magna labore. Laboris proident culpa exercitation laborum ullamco dolor pariatur.Et nisi commodo occaecat
+					cillum magna labore. Laboris proident culpa exercitation laborum ullamco dolor pariaturEt nisi commodo occaecat cillum magna labore. Laboris proident culpa exercitation laborum ullamco dolor pariatur.Et nisi commodo occaecat cillum magna labore.
+					Laboris proident culpa exercitation laborum ullamco dolor pariaturEt nisi commodo occaecat cillum magna labore. Laboris proident culpa exercitation laborum ullamco dolor pariatur.
+			</p>
+			<ul class="thema-list">
+				{% for t in themas %}
+				<li>
+					<a href="een-aanpak.html">{{ t.title }}</a>
+				</li>
+				{% endfor %}
+			</ul>
+		</article>
+		<article class="lol">
+			<h2>
+				Aanpakken</h2>
+			<p>
+				Et nisi commodo occaecat cillum magna labore. Laboris proident culpa exercitation laborum ullamco dolor pariaturEt nisi commodo occaecat cillum magna labore. Laboris proident culpa exercitation laborum ullamco dolor pariatur.Et nisi commodo occaecat
+					cillum magna labore. Laboris proident culpa exercitation laborum ullamco dolor pariaturEt nisi commodo occaecat cillum magna labore. Laboris proident culpa exercitation laborum ullamco dolor pariatur.Et nisi commodo occaecat cillum magna labore.
+					Laboris proident culpa exercitation laborum ullamco dolor pariaturEt nisi commodo occaecat cillum magna labore. Laboris proident culpa exercitation laborum ullamco dolor pariatur.Et nisi commodo occaecat cillum magna labore. Laboris proident culpa
+					exercitation laborum ullamco dolor pariaturEt nisi commodo occaecat cillum magna labore. Laboris proident culpa exercitation laborum ullamco dolor pariatur.
+			</p>
+		</article>
+	</div>
 </main>
 {% endblock %}
