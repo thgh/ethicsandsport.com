@@ -8,6 +8,17 @@
 		@include flex(1, 0, 50%);
 	}
 }
+@media (min-width: $screen-sm-min) {
+	.flex-sm {
+		@include flexbox;
+		&>* {
+			@include flex-grow(1);
+		}
+		aside {
+			@include flex(0, 0, 270px);
+		}
+	}
+}
 @media (min-width: $screen-lg-min) {
 	.grid-lg-2 {
 		@include flexbox;
@@ -122,18 +133,11 @@
 }
 @media (min-width: $screen-lg-min) {
 	.article {
-
-		// Content
-		&>article {
-			float: left;
-			width: 890px;
-		}
-
-		// Content
-		.aside {
-			float: left;
-			width: 270px;
-		}
+		float: left;
+		width: 930px;
+	}
+	.article-aside {
+		margin-left: 930px;
 	}
 	.aside {
 		section {
@@ -196,8 +200,10 @@
 	}
 }
 @media (min-width: $screen-lg-min) {
+	.main-fluid,
 	.main {
 		max-width: $screen-lg-min;
+		margin: 0 auto;
 	}
 	.grid-3 {
 		&>* {

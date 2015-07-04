@@ -80,3 +80,34 @@
 		color: $text-color;
 	}
 }
+.title-past {
+	position: relative;
+	z-index: 2;
+	font-size: 18px;
+	font-family: $font-tall;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #969696;
+	text-align: center;
+	&::before,
+	&::after {
+		content: ' ';
+		position: absolute;
+		z-index: 1;
+		top: 15px;
+		width: 25%;
+		background: $line-color;
+		height: 1px;
+		@media (min-width: 650px) {
+			& {
+				width: 40%;
+			}
+		}
+	}
+}
+.title-past::before {
+	left: 0;
+}
+.title-past::after {
+	right: 0;
+}

@@ -139,3 +139,10 @@ input[type="search"] {
 	background: $alt-light;
 	border-bottom: 6px solid $alt-shadow;
 }
+.btn-sm {
+	color: #fff;
+	background: $alt-light;
+	@include button-size(5px, $gutter, 16px, 20px, 0);
+  display: inline-block;
+  width: auto;
+}

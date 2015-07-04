@@ -20,3 +20,59 @@ $news-item-width: 300px + 2*$gutter;
 		width: 3*$news-item-width;
 	}
 }
+$line-width: 10px;
+$half-gutter: 0.5 * $gutter;
+$double-gutter: 2 * $gutter;
+.aanpak-item {
+	position: relative;
+	margin: $gutter 0 $gutter $gutter;
+	padding: $half-gutter 0 1px $double-gutter;
+	content: counter(count);
+	counter-increment: section;
+	&::before {
+		position: absolute;
+		content: ' ';
+		background: $line-color;
+		width: $line-width;
+		left: -$line-width/2;
+		top: -10px;
+		bottom: 0px;
+		border-radius: 5px;
+	}
+	&::after {
+		position: absolute;
+		z-index: 3;
+		content: counter(section);
+		font-size: 25px;
+		background: $alt-dark;
+		color: #fff;
+		width: 2 * $gutter;
+		height: 2 * $gutter;
+		top: 0;
+		left: -$gutter;
+		border-radius: 50%;
+		text-align: center;
+		line-height: 2 * $gutter;
+	}
+	@media (min-width: $screen-sm-min) {
+		&:nth-child(even) {
+			margin: $gutter 0 -70px 50%;
+		}
+		&:nth-child(odd) {
+			margin: $gutter 50% -70px 0;
+			padding: $half-gutter $double-gutter 1px 0;
+			text-align: right;
+			&::before {
+				left: auto;
+				right: -$line-width/2;
+			}
+			&::after {
+				left: auto;
+				right: -$gutter;
+			}
+		}
+		&:last-child {
+			margin-bottom: $gutter;
+		}
+	}
+}
