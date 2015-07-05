@@ -25,10 +25,24 @@ $half-gutter: 0.5 * $gutter;
 $double-gutter: 2 * $gutter;
 .aanpak-item {
 	position: relative;
-	margin: $gutter 0 $gutter $gutter;
-	padding: $half-gutter 0 1px $double-gutter;
+	margin: 0 0 0 $gutter;
+	padding: $half-gutter 0 $half-gutter $double-gutter;
 	content: counter(count);
 	counter-increment: section;
+	&>h3 {
+		position: relative;
+	}
+	&>h3::before {
+		position: absolute;
+		z-index: 2;
+		content: ' ';
+		background: $line-color;
+		height: 4px;
+		width: $gutter*2/3;
+		top: $gutter/2 - 2px;
+		left: -$gutter;
+		border-radius: 2px;
+	}
 	&::before {
 		position: absolute;
 		content: ' ';
@@ -69,6 +83,10 @@ $double-gutter: 2 * $gutter;
 			&::after {
 				left: auto;
 				right: -$gutter;
+			}
+			&>h3::before {
+				right: -$gutter;
+				left: auto;
 			}
 		}
 		&:last-child {
