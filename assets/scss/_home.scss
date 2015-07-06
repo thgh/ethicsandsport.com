@@ -93,7 +93,7 @@
 .activity-list-item {
 	@include clearfix;
 	margin: $gutter 0;
-	line-height: 1.2em;
+	line-height: 18px;
 	font-size: 14px;
 	font-weight: bold;
 	&>time {
@@ -119,6 +119,9 @@
 	}
 	h3 {
 		margin-top: 0;
+	}
+	p {
+		margin-top: 5px;
 	}
 }
 

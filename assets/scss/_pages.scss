@@ -1,5 +1,12 @@
 .news-grid-item {
 	padding: $gutter;
+	h3{
+		font-size: 24px;
+		line-height: 32px;
+	}
+	p {
+		margin: 5px 0;
+	}
 }
 .news-container {
 	padding: $gutter;
@@ -50,7 +57,7 @@ $double-gutter: 2 * $gutter;
 		width: $line-width;
 		left: -$line-width/2;
 		top: -10px;
-		bottom: 0px;
+		bottom: 0;
 		border-radius: 5px;
 	}
 	&::after {
