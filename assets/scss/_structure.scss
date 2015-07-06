@@ -2,6 +2,12 @@
 	padding-left: $gutter;
 	padding-right: $gutter;
 }
+.container-sm {
+	padding-left: $gutter;
+	padding-right: $gutter;
+	max-width: 600px;
+	margin: 0 auto;
+}
 .grid-2 {
 	@include flexbox;
 	&>* {
@@ -72,9 +78,6 @@
 		font-weight: 700;
 	}
 }
-.newsletter {
-
-}
 
 // Article
 .article {
@@ -110,42 +113,58 @@
 	margin-bottom: ($gutter * 2);
 }
 .aside {
-	section {
-		padding: 1px $gutter;
+	margin-bottom: 2 * $gutter;
+	padding: 0 $gutter;
+	h2 {
+		margin-top: 0;
+		padding-top: 0.83em;
 	}
 	ul {
 		padding-left: 20px;
 	}
-	section+section {
+	ul+h4 {
 		border-top: 1px solid $line-color;
+		margin-left: -$gutter;
+		margin-right: -$gutter;
+		padding-left: $gutter;
+		padding-right: $gutter;
+	}
+	.btn {
+		width: auto;
+		max-width: 300px;
+		margin-left: -$gutter;
+		margin-right: -$gutter;
 	}
 }
 @media (min-width: $screen-sm-min) {
-	.article {
-		nav>ul {
-			float: left;
-			width: 210px;
-		}
-	}
-	.article-content {
+	.has-left {
 		margin-left: 210px;
+	}
+	.left {
+		float: left;
+		width: 210px;
+	}
+	.has-aside-sm {
+		float: left;
+		width: 480px;
+	}
+	.aside-sm {
+		margin-left: 480px;
+		border: 1px solid $line-color;
+		border-width: 0 1px 1px 1px;
 	}
 }
 @media (min-width: $screen-lg-min) {
-	.article {
+	.has-aside-sm,
+	.has-aside-lg {
 		float: left;
-		width: 930px;
+		width: 920px;
 	}
-	.article-aside {
-		margin-left: 930px;
-	}
-	.aside {
-		section {
-			border-left: 1px solid $line-color;
-
-			//border-right: 1px solid $line-color;
-			padding: 1px 15px;
-		}
+	.aside-sm,
+	.aside-lg {
+		margin-left: 920px;
+		border: 1px solid $line-color;
+		border-width: 0 1px 1px 1px;
 	}
 }
 
@@ -200,7 +219,6 @@
 	}
 }
 @media (min-width: $screen-lg-min) {
-	.main-fluid,
 	.main {
 		max-width: $screen-lg-min;
 		margin: 0 auto;
@@ -219,6 +237,17 @@
 
 // Tablet styles
 @media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+	.divider-tablet-top {
+		margin-top: 2 * $gutter;
+		&::before {
+			position: absolute;
+			content: ' ';
+			left: 0;
+			right: 0;
+			height: 1px;
+			background: $line-color;
+		}
+	}
 	.grid-tablet-2 {
 		@include flexbox;
 		border-top: 1px solid $line-color;
@@ -226,7 +255,19 @@
 			@include flex(1, 0, 50%);
 		}
 	}
-	.aside {
+	.grid-tablet-3 {
+		@include clearfix;
+		margin: 0 -15px;
+		&>* {
+			float: left;
+			width: 33.3333%;
+			padding: 15px;
+		}
+	}
+	.btn.center-tablet {
+		margin: 0 auto;
+	}
+	.article-aside {
 		.btn {
 			max-width: 270px;
 			margin: 3 * $gutter auto;

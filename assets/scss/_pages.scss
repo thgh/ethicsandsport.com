@@ -1,6 +1,6 @@
 .news-grid-item {
 	padding: $gutter;
-	h3{
+	h3 {
 		font-size: 24px;
 		line-height: 32px;
 	}
@@ -99,5 +99,11 @@ $double-gutter: 2 * $gutter;
 		&:last-child {
 			margin-bottom: $gutter;
 		}
+	}
+}
+.news-item {
+	h2 {
+		font-size: 42px;
+		line-height: 50px;
 	}
 }

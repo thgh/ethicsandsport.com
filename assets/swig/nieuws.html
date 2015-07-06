@@ -4,7 +4,7 @@
 
 {% block content %}
 <div class="divider-top">
-	<ol class="breadcrumb">
+	<ol class="breadcrumb main">
 		<li>
 			<a href="/">Home</a>
 		</li>
@@ -18,20 +18,22 @@
 		<h2 class="text-hide">Nieuws</h2>
 		<div class="grid-3">
 			{% for item in news.slice('0', '6') %}
-			<article class="news-grid-item">
-				<figure>
-					<img alt="" height="200px" src="{{ item.picture }}" width="300px"/>
-				</figure>
-				<div>
-					<h3>{{ item.title }}</h3>
-					<p>
-						<time datetime="{{ item.date }}">{{ item.date }}</time>
-					</p>
-					<p>
-						{{ item.excerpt }}
-					</p>
-				</div>
-			</article>
+			<a class="link-block" href="nieuws-item.html">
+				<article class="news-grid-item">
+					<figure>
+						<img alt="" height="200px" src="{{ item.picture }}" width="300px"/>
+					</figure>
+					<div>
+						<h3>{{ item.title }}</h3>
+						<p>
+							<time datetime="{{ item.date }}">{{ item.date }}</time>
+						</p>
+						<p>
+							{{ item.excerpt }}
+						</p>
+					</div>
+				</article>
+			</a>
 			{% endfor %}
 		</div>
 	</main>

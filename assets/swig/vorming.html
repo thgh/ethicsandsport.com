@@ -4,7 +4,7 @@
 
 {% block content %}
 <div class="divider-bottom divider-top">
-	<ol class="main-fluid breadcrumb">
+	<ol class="breadcrumb main">
 		<li>
 			<a href="/">Home</a>
 		</li>
@@ -13,50 +13,50 @@
 		</li>
 	</ol>
 </div>
-<main class="main-fluid flex-sm" id="activities">
-	<div class="container">
-		<h2>Vormingen</h2>
-		{% for activity in activities.slice('0', '4') %}
-		<a class="link-block activity-list-item">
-			<time datetime="{{ activity.date }}">
-				<b>{{ activity.date | replace("^(..).*", "$1") }}</b>
-				{{ activity.date | replace("^...(...)..(..).*", "$1$2") }}
-			</time>
-			<div class="">
-				<h3>{{ activity.title }}</h3>
-				<p>
-					{{ activity.location }}<br>
-					{{ activity.street }},
-					{{ activity.city }}
-				</p>
-			</div>
-		</a>
-		{% endfor %}
-		<h2 class="title-past">Voorbije events</h2>
-		{% for activity in activities.slice('0', '2') %}
-		<a class="link-block activity-list-item event-past">
-			<time datetime="{{ activity.date }}">
-				<b>{{ activity.date | replace("^(..).*", "$1") }}</b>
-				{{ activity.date | replace("^...(...)..(..).*", "$1$2") }}
-			</time>
-			<div class="">
-				<h3>{{ activity.title }}</h3>
-				<p>
-					{{ activity.location }}<br>
-					{{ activity.street }},
-					{{ activity.city }}
-				</p>
-			</div>
-		</a>
-		{% endfor %}
+<main class="main clearfix" id="activities">
+	<div class="has-aside-sm">
+		<div class="container-sm">
+			<h2>Vormingen</h2>
+			{% for activity in activities.slice('0', '4') %}
+			<a class="link-block activity-list-item">
+				<time datetime="{{ activity.date }}">
+					<b>{{ activity.date | replace("^(..).*", "$1") }}</b>
+					{{ activity.date | replace("^...(...)..(..).*", "$1$2") }}
+				</time>
+				<div>
+					<h3>{{ activity.title }}</h3>
+					<p>
+						{{ activity.location }}<br>
+						{{ activity.street }},
+						{{ activity.city }}
+					</p>
+				</div>
+			</a>
+			{% endfor %}
+			<h2 class="title-past">Voorbije events</h2>
+			{% for activity in activities.slice('0', '2') %}
+			<a class="link-block activity-list-item event-past">
+				<time datetime="{{ activity.date }}">
+					<b>{{ activity.date | replace("^(..).*", "$1") }}</b>
+					{{ activity.date | replace("^...(...)..(..).*", "$1$2") }}
+				</time>
+				<div>
+					<h3>{{ activity.title }}</h3>
+					<p>
+						{{ activity.location }}<br>
+						{{ activity.street }},
+						{{ activity.city }}
+					</p>
+				</div>
+			</a>
+			{% endfor %}
+		</div>
 	</div>
-	<aside class="aside">
-		<section>
-			<h2>Vorming op maat</h2>
-			<p>
-				Aanbod van trainingen volgens uw behoeften lorem ipsum
-			</p>
-		</section>
+	<aside class="aside aside-sm">
+		<h2>Vorming op maat</h2>
+		<p>
+			Aanbod van trainingen volgens uw behoeften lorem ipsum
+		</p>
 		<a class="btn btn-alt" href="#">Meer uitleg?<br>Contacteer ons</a>
 	</aside>
 </main>
