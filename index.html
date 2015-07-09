@@ -14,11 +14,13 @@
 </head>
 
 <body>
-	<header>
-		<div class="header-xs">
+	<header class="header">
+		<div class="main">
 			<a href="#">
 				<h1>ICES</h1>
 			</a>
+		</div>
+		<div class="header-xs">
 			<button type="button"><i class="glyphicon glyphicon-menu-hamburger"></i>
 				<span class="text-hide">Navigation</span>
 			</button>
@@ -29,10 +31,8 @@
 
 		</div>
 		<div class="header-sm">
-			<a href="#">
-				<h1>ICES</h1>
-			</a>
-			<nav class="nav-top">
+			<div class="abs-topright">
+				<nav class="nav-top">
 	<ul>
 		
 		<li><a href="#">Over ICES</a></li>
@@ -50,7 +50,8 @@
 	<input type="search" name="name" value="" placeholder="Zoekterm">
 </form>
 
-			<br> <nav class="nav-main">
+			</div>
+			<nav class="nav-main">
 	<ul>
 		
 		<li><a class="active" href="index.html">Home</a>
