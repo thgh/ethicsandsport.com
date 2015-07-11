@@ -5,11 +5,10 @@ var sass = require('gulp-sass');
 var swig = require('gulp-swig');
 var data = require('gulp-data');
 var connect = require('gulp-connect');
-var livereload = require('gulp-livereload');
 
 var paths = {
 	css: './assets/css/',
-	sass: ['./assets/scss/*.scss'],
+	sass: ['./assets/scss/**/*.scss'],
 	swig: ['./assets/swig/**/*.html'],
 	pages: ['./assets/swig/*.html']
 };
@@ -17,7 +16,6 @@ var paths = {
 gulp.task('default', ['watch', 'live', 'sass', 'swig']);
 
 gulp.task('watch', function() {
-	livereload.listen();
 	gulp.watch(paths.sass, ['sass']);
 	gulp.watch(paths.swig, ['swig']);
 });
@@ -29,7 +27,7 @@ gulp.task('live', function() {
 	});
 });
 
-gulp.task('sass', ['time'], function(done) {
+gulp.task('sass', ['time'], function() {
 	gulp.src('./assets/scss/screen.scss')
 		.pipe(sass({
 				outputStyle: 'compressed'
@@ -39,11 +37,10 @@ gulp.task('sass', ['time'], function(done) {
 				done();
 			}))
 		.pipe(gulp.dest(paths.css))
-		.pipe(livereload())
-		.on('end', done);
+		.pipe(connect.reload())
 });
 
-gulp.task('swig', ['time'], function(done) {
+gulp.task('swig', ['time'], function() {
 	gulp.src(paths.pages)
 		.pipe(data(require('./assets/data.json')))
 		.pipe(swig({
@@ -53,8 +50,7 @@ gulp.task('swig', ['time'], function(done) {
 			}
 		}))
 		.pipe(gulp.dest('./'))
-		.pipe(livereload())
-		.on('end', done);
+		.pipe(connect.reload())
 });
 
 gulp.task('time', function(done) {

@@ -1,7 +1,6 @@
 {
   "devDependencies": {
     "gulp": "*",
-    "gulp-livereload": "*",
     "gulp-connect": "*",
     "gulp-data":"*",
     "gulp-swig":"*",
