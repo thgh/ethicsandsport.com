@@ -43,8 +43,7 @@
 .header-sm {
 	display: none;
 	@media (min-width: $screen-sm-min) {
-		@include flexbox;
-		@include flex-wrap(wrap);
+		display: block;
 	}
 }
 

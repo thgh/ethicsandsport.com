@@ -14,22 +14,23 @@
 </head>
 
 <body>
-	<header>
-		<div class="header-xs">
+	<header class="header">
+		<div class="main">
 			<a href="#">
 				<h1>ICES</h1>
 			</a>
+		</div>
+		<div class="header-xs">
 			<button type="button"><i class="glyphicon glyphicon-menu-hamburger"></i>
 				<span class="text-hide">Navigation</span>
 			</button>
 			{% include "search-form.html" %}
 		</div>
 		<div class="header-sm">
-			<a href="#">
-				<h1>ICES</h1>
-			</a>
-			{% include "nav-top.html" %} {% include "search-form.html" %}
-			<br> {% include "nav-main.html" %}
+			<div class="abs-topright">
+				{% include "nav-top.html" %} {% include "search-form.html" %}
+			</div>
+			{% include "nav-main.html" %}
 		</div>
 	</header>
 	{% block content %} {% endblock %}
