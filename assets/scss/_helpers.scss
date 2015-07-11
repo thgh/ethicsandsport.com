@@ -80,6 +80,17 @@
 		color: $text-color;
 	}
 }
+.aanpak-list {
+	margin-bottom: $gutter / 2;
+	li {
+		padding-bottom: $gutter/2;
+		list-style-type: square;
+		color: $alt-dark;
+	}
+	li>a {
+		color: $text-color;
+	}
+}
 .title-past {
 	position: relative;
 	z-index: 2;

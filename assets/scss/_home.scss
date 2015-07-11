@@ -1,32 +1,3 @@
-// home-cta
-.area {
-	@include flexbox;
-	@include flex-direction(column);
-	@include justify-content(center);
-	@include align-items(center);
-	text-align: center;
-	h2 {
-		margin: 0;
-		padding-top: 1em;
-		font-size: 28px;
-		font-weight: 300;
-		line-height: 1.25em;
-	}
-	button {
-		display: block;
-		margin: 1em 0;
-		width: 65px;
-		height: 65px;
-		border: 1px solid #fff;
-		border-radius: 50%;
-		font-size: 25px;
-		font-weight: 300;
-		font-family: $font-tall;
-		text-transform: uppercase;
-		background: none;
-	}
-}
-
 // Site overview: dividers and alignment
 .home-activities {
 	border-top: 1px solid $line-color;
@@ -50,9 +21,6 @@
 		h2 {
 			text-align: left;
 		}
-	}
-	.area h2 {
-		font-size: 45px;
 	}
 }
 @media (min-width: $screen-lg-min) {
