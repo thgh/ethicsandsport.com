@@ -34,7 +34,6 @@ gulp.task('sass', ['time'], function() {
 			})
 			.on('error', function(err) {
 				console.error('Error!', err.message);
-				done();
 			}))
 		.pipe(gulp.dest(paths.css))
 		.pipe(connect.reload())

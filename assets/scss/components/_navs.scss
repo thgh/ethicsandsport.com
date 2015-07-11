@@ -1,0 +1,70 @@
+// Mobile
+@media (max-width: $screen-xs-max) {
+	.nav-mobile {
+		transition: left 0.3s;
+		position: fixed;
+		top: 0;
+		left: -250px;
+		bottom: 0;
+		width: 250px;
+		overflow: auto;
+		background: #333;
+		color: #fff;
+		ul {
+			list-style-type: none;
+		}
+		li {
+			display: block;
+		}
+		a {
+			display: block;
+			padding: 0 $gutter;
+			font-family: $font-tall;
+			font-weight: 500;
+			font-size: 21px;
+			line-height: 40px;
+			text-transform: uppercase;
+			&:hover,
+			&:focus {
+				background: rgba(0,0,0,0.5);
+			}
+		}
+	}
+	.nav-close {
+		height: 60px;
+		padding: 0 $gutter 15px;
+		font-size: 40px;
+		text-align: left;
+		background: none;
+		&:hover,
+		&:focus {
+			background: rgba(0,0,0,0.5);
+			color: #fff;
+		}
+	}
+	.nav-brand {
+		color: lighten($brand, 30%);
+	}
+	.nav-open .nav-mobile {
+		left: 0;
+	}
+	body {
+		transition: left 0.3s;
+		position: relative;
+		left: 0;
+		overflow-x: hidden;
+		&.nav-open {
+			left: 250px;
+		}
+	}
+}
+
+// Tablet+
+@media (min-width: $screen-sm-min) {
+	.nav-mobile {
+		display: none;
+	}
+}
+:focus {
+	outline: $brand auto 5px;
+}

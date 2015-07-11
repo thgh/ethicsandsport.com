@@ -1,4 +1,5 @@
 <nav class="nav-mobile">
+	<button aria-label="Close navigation" onclick="navToggle()" class="btn nav-close">&times;</button>
 	<ul>
 		{% for item in navMain %}
 		<li>
@@ -9,7 +10,7 @@
 		</li>
 		{% endfor %}
 	</ul>
-	<ul>
+	<ul class="nav-brand">
 		{% for item in navTop %}
 		<li>
 			{%- if item.url==page -%}

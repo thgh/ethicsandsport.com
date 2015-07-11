@@ -21,7 +21,8 @@
 			</a>
 		</div>
 		<div class="header-xs">
-			<button type="button"><i class="glyphicon glyphicon-menu-hamburger"></i>
+			<button type="button" onclick="navToggle()">
+				<i class="glyphicon glyphicon-menu-hamburger"></i>
 				<span class="text-hide">Navigation</span>
 			</button>
 			<form class="search-form" action="index.html" method="post">
@@ -224,8 +225,8 @@
 			<img alt="" src="assets/img/vlaanderen.png" />
 		</p>
 	</footer>
-	<div class="hide">
-		<nav class="nav-mobile">
+	<nav class="nav-mobile">
+	<button aria-label="Close navigation" onclick="navToggle()" class="btn nav-close">&times;</button>
 	<ul>
 		
 		<li><a href="index.html">Home</a></li>
@@ -240,7 +241,7 @@
 		<li><a href="tools.html">Tools</a></li>
 		
 	</ul>
-	<ul>
+	<ul class="nav-brand">
 		
 		<li><a href="#">Over ICES</a></li>
 		
@@ -253,7 +254,8 @@
 	</ul>
 </nav>
 
-	</div>
+	<script src="bower_components/classie/classie.js" defer></script>
+	<script src="assets/js/main.js" defer></script> 
 </body>
 
 </html>

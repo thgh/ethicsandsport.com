@@ -26,6 +26,9 @@ $font-tall: "refrigerator-deluxe";
 @import 'structure';
 @import 'helpers';
 
+// Components
+@import 'components/navs';
+
 // Specific pages
 @import 'home';
 @import 'pages';

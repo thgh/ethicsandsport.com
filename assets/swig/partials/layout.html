@@ -21,7 +21,8 @@
 			</a>
 		</div>
 		<div class="header-xs">
-			<button type="button"><i class="glyphicon glyphicon-menu-hamburger"></i>
+			<button type="button" onclick="navToggle()">
+				<i class="glyphicon glyphicon-menu-hamburger"></i>
 				<span class="text-hide">Navigation</span>
 			</button>
 			{% include "search-form.html" %}
@@ -66,9 +67,10 @@
 			<img alt="" src="assets/img/vlaanderen.png" />
 		</p>
 	</footer>
-	<div class="hide">
-		{% include "nav-mobile.html" %}
-	</div>
+	{% include "nav-mobile.html" %}
+	<script src="bower_components/classie/classie.js" defer></script>
+	<script src="assets/js/main.js" defer></script>
+	{%- block scripts %} {% endblock %}
 </body>
 
 </html>
