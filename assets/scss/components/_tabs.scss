@@ -1,0 +1,53 @@
+.tabs-2 {
+	@include clearfix;
+	position: relative;
+	&>.tab {
+		float: left;
+		width: 50%;
+	}
+	.tab-title {
+		display: block;
+		text-align: center;
+		font-size: 18px;
+		font-weight: 300;
+		line-height: 50px;
+		padding: 0;
+		margin: 0;
+		color: #fff;
+		@include user-select(none);
+		cursor: pointer;
+	}
+	.tab-content {
+		transition: max-height 0.6s;
+		max-height: 0;
+		position: absolute;
+		z-index: 1;
+		top: 100%;
+		left: 0;
+		right: 0;
+		background: inherit;
+		overflow: hidden;
+		a {
+			color: #fff;
+		}
+	}
+}
+.tab-active {
+	.tab-content {
+		z-index: 2;
+		max-height: 300px;
+	}
+}
+
+// Tablet+
+@media (min-width: $screen-sm-min) {
+	.tabs-2 {
+		.tab {
+			position: relative;
+		}
+		.tab-title {
+			line-height: 60px;
+			font-size: 28px;
+		}
+	}
+}

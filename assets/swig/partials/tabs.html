@@ -1,0 +1,26 @@
+<div class="tabs-2">
+	<div class="tab bg-alt-light">
+		<a class="tab-title">Kies een thema</a>
+		<section class="tab-content">
+			<ul class="thema-list">
+				{% for t in themas %}
+				<li>
+					<a href="een-aanpak.html">{{ t.title }}</a>
+				</li>
+				{% endfor %}
+			</ul>
+		</section>
+	</div>
+	<div class="tab bg-alt-dark">
+		<a class="tab-title">Kies een aanpak</a>
+		<section class="tab-content">
+			<ul class="aanpak-list">
+				{% for t in aanpakken %}
+				<li>
+					<a href="een-aanpak.html">{{ t.title }}</a>
+				</li>
+				{% endfor %}
+			</ul>
+		</section>
+	</div>
+</div>
