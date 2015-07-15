@@ -60,7 +60,8 @@
 			backToIntro = function( ev ) {
 				ev.preventDefault();
 				ev.stopPropagation();
-				var dir = classie.has( ev.target, 'back-right' ) ? 'left' : 'right',
+				var target = classie.has(ev.target, 'glyphicon') ? ev.target.parentNode : ev.target;
+				var dir = classie.has( target, 'back-right' ) ? 'left' : 'right',
 					page = dir === 'right' ? pageRight : pageLeft;
 				classie.remove( splitlayout, 'open-' + dir );
 				classie.add( splitlayout, 'close-' + dir );
