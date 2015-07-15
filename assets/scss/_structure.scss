@@ -1,3 +1,6 @@
+.wrapper {
+	position: relative;
+}
 .container {
 	padding-left: $gutter;
 	padding-right: $gutter;
@@ -201,10 +204,15 @@
 	}
 	.illustrated,
 	.grid-3 {
-		@include flexbox;
-		@include flex-wrap(wrap);
+		@include clearfix;
+		height: 100%;
 		&>* {
-			@include flex(1, 0, 50%);
+			float: left;
+			width: 50%;
+			min-height: 100%;
+		}
+		&>.col-lg {
+			width: 100%;
 		}
 	}
 	.pageFooter {
@@ -224,13 +232,14 @@
 		margin: 0 auto;
 	}
 	.grid-3 {
+		&>.col-lg,
 		&>* {
-			@include flex(0, 0, calc( 100%/3 ));
+			width: 33.333%;
 		}
 	}
 	.illustrated {
 		&>* {
-			@include flex(1, 0, 100%);
+			width: 100%;
 		}
 	}
 }

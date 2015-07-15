@@ -44,9 +44,10 @@
 	<a href="#" class="back back-right"><i class="glyphicon glyphicon-chevron-right"></i></a>
 	<a href="#" class="back back-left"><i class="glyphicon glyphicon-chevron-left"></i></a>
 </div><!-- /splitlayout -->
+<div class="wrapper">
 <main class="main" id="home">
 	<div class="grid-3">
-		<section class="home-news" id="news">
+		<section class="home-news col-sm" id="news">
 			<h2 class="container">Nieuws</h2>
 			<div class="container divider-top">
 				{% for item in news.slice('0', '3') %}
@@ -64,7 +65,7 @@
 				{% endfor %}
 			</div>
 		</section>
-		<section class="home-activities" id="activities">
+		<section class="home-activities col-sm" id="activities">
 			<h2 class="container">Activiteiten</h2>
 			<div class="container divider-top">
 				{% for activity in activities.slice('0', '3') %}
@@ -84,7 +85,7 @@
 				{% endfor %}
 			</div>
 		</section>
-		<section class="home-tools" id="tools">
+		<section class="home-tools col-lg" id="tools">
 			<h2 class="container">
 				Tools
 			</h2>
@@ -107,6 +108,7 @@
 		</section>
 	</div>
 </main>
+</div>
 <div class="social-wrapper visible-sm visible-md visible-lg">
 	<div class="grid-2 main">
 		<section id="twitter">
