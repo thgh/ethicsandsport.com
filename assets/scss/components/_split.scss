@@ -155,12 +155,6 @@
 		}
 	}
 }
-.splitlayout a{
-  color: #fff!important;
-  &:hover,&:focus{
-    color: #fff;
-  }
-}
 
 .splitlayout button {
   display: inline-block;
@@ -243,7 +237,7 @@ background: $alt-dark;
 .splitlayout.open-left .page-left {
 	position: relative;
 	overflow: auto;
-	height: auto;
+	height: 100%;
 }
 
 .open-right .side-left .overlay,

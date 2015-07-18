@@ -1,0 +1,66 @@
+$list-padding: 40px;
+$list-padding-vink: 36px;
+$list-padding-roadmap: 20px;
+$list-padding-driehoek: 32px;
+.list {
+	li {
+		&>a {
+			display: block;
+			padding: $gutter/4 0;
+			color: inherit;
+		}
+	}
+}
+.list--thema {
+	padding-left: $list-padding-vink;
+	li {
+		padding-left: $list-padding - $list-padding-vink;
+		list-style-image: url("../img/bullet_vink.png");
+	}
+}
+.list--thema.list--white {
+	li {
+		list-style-image: url("../img/bullet_vink_white.png");
+	}
+}
+.list--aanpak {
+	padding-left: $list-padding-roadmap;
+	li {
+		padding-left: $list-padding - $list-padding-roadmap;
+		list-style-type: none;
+		position: relative;
+		&::before {
+			content: ' ';
+			position: absolute;
+			top: $gutter/2;
+			left: 0;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			background: #fff;
+			background: rgba(255,255,255,.5);
+		}
+		&::after {
+			content: ' ';
+			position: absolute;
+			top: $gutter/2 + 5px;
+			left: 4px;
+			width: 2px;
+			height: $gutter/2 + 23px;
+			background: #fff;
+			background: rgba(255,255,255,.5);
+		}
+	}
+}
+.list--aanpak.list--white {
+	li {
+
+	}
+}
+.list--act {
+	padding-left: $list-padding-driehoek;
+	li {
+		padding-left: $list-padding - $list-padding-driehoek;
+		list-style-image: url("../img/bullet_driehoek.png");
+	}
+}
