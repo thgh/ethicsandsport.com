@@ -1,8 +1,12 @@
 $list-padding: 40px;
-$list-padding-vink: 36px;
-$list-padding-roadmap: 20px;
-$list-padding-driehoek: 32px;
+$list-padding-vink: 37px;
+$list-padding-roadmap: 15px;
+$list-padding-driehoek: 37px;
 .list {
+	display: inline-block;
+	margin: 0;
+	padding: $gutter 0;
+	text-align: left;
 	li {
 		&>a {
 			display: block;
@@ -34,21 +38,22 @@ $list-padding-driehoek: 32px;
 			position: absolute;
 			top: $gutter/2;
 			left: 0;
-			width: 10px;
-			height: 10px;
+			width: 13px;
+			height: 13px;
 			border-radius: 50%;
-			background: #fff;
-			background: rgba(255,255,255,.5);
+			background: mix($alt-dark, $alt-light);
 		}
 		&::after {
 			content: ' ';
 			position: absolute;
-			top: $gutter/2 + 5px;
-			left: 4px;
-			width: 2px;
-			height: $gutter/2 + 23px;
-			background: #fff;
-			background: rgba(255,255,255,.5);
+			top: $gutter/4 + 23px/2;
+			bottom: -$gutter/4 - 23px/2;
+			left: 5px;
+			width: 3px;
+			background: mix($alt-dark, $alt-light);
+		}
+		&:last-child::after {
+			display: none;
 		}
 	}
 }
