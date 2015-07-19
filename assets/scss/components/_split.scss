@@ -56,27 +56,17 @@
 
 .back {
 	position: absolute;
-	bottom: 1.5em;
+	bottom:2.5rem;
 	z-index: 500;
 	visibility: hidden;
-	text-align: center;
 	opacity: 0;
 
-
-
-    display: inline-block;
-    width: 65px;
-    height: 65px;
-    line-height: 65px;
-    border: 1px solid #fff;
-    border-radius: 50%;
-    font-size: 25px;
-    font-weight: 300;
-    font-family: $font-tall;
-    text-transform: uppercase;
-    &:hover,&:focus{
-      background: none;
-    }
+	display: block;
+	width: 66px;
+	height: 66px;
+	border-radius: 50%;
+	background: url(../img/sluithome.png) center no-repeat;
+	background-size: contain;
 }
 
 .mobile-layout .back { /* fixed positioning will make this not clickable after scrolling on some mobile devices */
@@ -87,14 +77,18 @@
 	left: 12.5%;
 	-webkit-transform: translateX(-50%);
 	transform: translateX(-50%);
-  background: $alt-light;
+	&:hover{
+		background-color: $alt-light;
+	}
 }
 
 .back-right {
 	right: 12.5%;
 	-webkit-transform: translateX(50%);
 	transform: translateX(50%);
-  background: $alt-dark;
+	&:hover{
+		background-color: $alt-dark;
+	}
 }
 
 .open-right .back-left,
