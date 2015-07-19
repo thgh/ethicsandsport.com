@@ -16,13 +16,20 @@ header {
 		color: #fff;
 	}
 }
-h1 {
+.logo {
 	float: right;
+  display: block;
 	margin: 0;
 	padding: 0 $gutter;
 	height: 60px;
+	width: 120px;
 	color: #fff;
-	background: $brand;
+	background: url("../img/ices_logo.svg") no-repeat;
+	background-size: auto 40px;
+	background-position: $gutter center;
+	&:hover{
+		opacity: .7;
+	}
 }
 h2 {
 	font-weight: 300;
@@ -125,7 +132,7 @@ header button {
 	}
 }
 @media (min-width: $screen-sm-min) {
-	h1{
+	.logo {
 		float: none;
 	}
 
