@@ -211,6 +211,9 @@
 			width: 50%;
 			min-height: 100%;
 		}
+		&>*:nth-child(2n+1) {
+			clear: left;
+		}
 		&>.col-lg {
 			width: 100%;
 		}
@@ -235,6 +238,12 @@
 		&>.col-lg,
 		&>* {
 			width: 33.333%;
+		}
+		&>*:nth-child(2n+1) {
+			clear: none;
+		}
+		&>*:nth-child(3n+1) {
+			clear: left;
 		}
 	}
 	.illustrated {
