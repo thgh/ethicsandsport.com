@@ -69,3 +69,12 @@ $list-padding-driehoek: 37px;
 		list-style-image: url("../img/bullet_driehoek.png");
 	}
 }
+.list--inline {
+	padding: 10px 0 10px 20px;
+	li {
+		font-size: 14px;
+		float: left;
+		padding-right: 30px;
+		padding-left: 0;
+	}
+}
