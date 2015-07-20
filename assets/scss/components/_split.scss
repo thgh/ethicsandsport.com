@@ -110,6 +110,7 @@
 	height: auto;
 	-webkit-backface-visibility: hidden;
 	color: #fff;
+	text-align: center;
 }
 
 .page-right {
@@ -171,13 +172,13 @@
 
 // Pages
 .page-right {
-	background: $alt-light;
+	background: $alt-dark;
 }
 .splitlayout.open-right {
 	background: $alt-light;
 }
 .page-left {
-  background: $alt-dark;
+  background: $alt-light;
 	color: #fff;
 }
 .splitlayout.open-left {
