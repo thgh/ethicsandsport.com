@@ -67,6 +67,9 @@
 	border-radius: 50%;
 	background: url(../img/sluithome.png) center no-repeat;
 	background-size: contain;
+
+	font-size: 0!important;
+	color: transparent!important;
 }
 
 .mobile-layout .back { /* fixed positioning will make this not clickable after scrolling on some mobile devices */
