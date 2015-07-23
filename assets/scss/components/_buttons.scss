@@ -37,7 +37,7 @@
 	}
 }
 
-.btn-alt {
+.btn--alt {
 	transition: box-shadow .2s, transform .2s;
 	color: #fff;
 	background-color: $alt-light;
@@ -57,7 +57,7 @@
 	}
 }
 
-.btn-sm {
+.btn--sm {
 	color: #fff;
 	background: $alt-light;
 	@include button-size(5px, $gutter, 16px, 20px, 0);
@@ -80,5 +80,6 @@
 }
 .btn--head {
 	padding-top: 26px;
+	padding-bottom: 26px;
 	background-image: url(../img/icon_inspireer.png);
 }
