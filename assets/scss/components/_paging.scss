@@ -1,0 +1,36 @@
+.paging {
+	margin-top: $gutter;
+	text-align: center;
+	line-height: 50px;
+	color: #666;
+	font-size: 23px;
+	font-family: $font-tall;
+	svg {
+		display: block;
+		margin: 0 $gutter;
+	}
+	path {
+		stroke: #666;
+	}
+	&>a{
+		display: inline-block;
+		vertical-align: top;
+	}
+	&>a:hover,
+	&>a:focus {
+		color: $brand;
+		text-decoration: none;
+		path {
+			stroke: $brand;
+		}
+	}
+}
+
+.paging--disabled {
+	cursor: default;
+	color: #999!important;
+	path {
+		stroke: #ddd!important;
+	}
+}
+
