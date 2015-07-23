@@ -17,12 +17,11 @@
 	&:focus,
 	&.focus {
 		color: #fff;
-		background: $alt-dark;
+		background-color: $alt-dark;
 		text-decoration: none;
 	}
 	&:active,
 	&.active {
-		background-image: none;
 		@include box-shadow(inset 0 3px 5px rgba(0, 0, 0, .125));
 	}
 	&.disabled,
@@ -34,21 +33,25 @@
 	}
 	strong {
 		display: block;
+		font-weight: bold;
 	}
 }
 
 .btn-alt {
 	transition: box-shadow .2s, transform .2s;
 	color: #fff;
-	background: $alt-light;
+	background-color: $alt-light;
 	box-shadow: 0 6px $alt-shadow;
-	&:hover {
-		color: #fff;
-		box-shadow: 0 4px $alt-shadow;
-		transform: translateY(2px);
-	}
+	&:hover,
 	&:focus {
 		color: #fff;
+		color: #fff;
+		background-color: $alt-light;
+	}
+	&:hover {
+		box-shadow: 0 6px $alt-dark;
+	}
+	&:focus {
 		box-shadow: 0 0;
 		transform: translateY(6px);
 	}
@@ -60,4 +63,22 @@
 	@include button-size(5px, $gutter, 16px, 20px, 0);
 	display: inline-block;
 	width: auto;
+}
+
+.btn--icon {
+	text-align: left;
+	padding-left: 50px + $gutter;
+	background-repeat: no-repeat;
+	background-position: $gutter/2 50%;
+}
+
+.btn--cone {
+	background-image: url(../img/icon_praktijkvoorbeeld.png);
+}
+.btn--layers {
+	background-image: url(../img/icon_structureel.png);
+}
+.btn--head {
+	padding-top: 26px;
+	background-image: url(../img/icon_inspireer.png);
 }
