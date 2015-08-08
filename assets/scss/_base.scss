@@ -37,6 +37,10 @@ h2 {
 	line-height: 30px;
 	margin: 30px 0;
 }
+.h2--large{
+	font-size: 42px;
+	line-height: 50px;
+}
 h3 {
 	margin: 0;
 	line-height: 1.2em;
@@ -131,6 +135,12 @@ header button {
 		text-transform: uppercase;
 	}
 }
+
+// Horizontal line
+hr {
+	border-color: $line-color;
+}
+
 @media (min-width: $screen-sm-min) {
 	.logo {
 		float: none;

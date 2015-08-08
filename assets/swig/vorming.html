@@ -18,7 +18,7 @@
 		<div class="container-sm">
 			<h2>Vormingen</h2>
 			{% for activity in activities.slice('0', '4') %}
-			<a class="link-block activity-list-item">
+			<a href="vorming-detail.html" class="link-block activity-list-item">
 				<time datetime="{{ activity.date }}">
 					<b>{{ activity.date | replace("^(..).*", "$1") }}</b>
 					{{ activity.date | replace("^...(...)..(..).*", "$1$2") }}

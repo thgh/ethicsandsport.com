@@ -1,0 +1,25 @@
+.iconleft {
+	padding-left: 30px;
+	background-size: 17px;
+	background-repeat: no-repeat;
+	background-position: 0 3px;
+}
+
+.il {
+	&--calendar {
+		background-image: url(../img/calendar.svg);
+	}
+	&--eur {
+		background-image: url(../img/eur.svg);
+	}
+	&--marker {
+		background-image: url(../img/map-marker.svg);
+	}
+	&--star {
+		background-image: url(../img/star.svg);
+	}
+	&--user {
+		background-image: url(../img/user.svg);
+	}
+}
+

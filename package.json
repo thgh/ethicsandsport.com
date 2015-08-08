@@ -1,9 +1,10 @@
 {
-  "devDependencies": {
-    "gulp": "*",
-    "gulp-connect": "*",
-    "gulp-data":"*",
-    "gulp-swig":"*",
-    "gulp-sass": "~2.0.1"
-  }
+	"devDependencies": {
+		"gulp": "*",
+		"gulp-connect": "*",
+		"gulp-data": "*",
+		"gulp-swig": "*",
+		"gulp-sass": "~2.0.1",
+		"gulp-sourcemaps": "^1.5.2"
+	}
 }

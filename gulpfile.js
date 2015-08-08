@@ -5,6 +5,7 @@ var sass = require('gulp-sass');
 var swig = require('gulp-swig');
 var data = require('gulp-data');
 var connect = require('gulp-connect');
+var sourcemaps = require('gulp-sourcemaps');
 
 var paths = {
 	css: './assets/css/',
@@ -29,12 +30,14 @@ gulp.task('live', function() {
 
 gulp.task('sass', ['time'], function() {
 	gulp.src('./assets/scss/screen.scss')
+		.pipe(sourcemaps.init())
 		.pipe(sass({
 				outputStyle: 'compressed'
 			})
 			.on('error', function(err) {
 				console.error('Error!', err.message);
 			}))
+		.pipe(sourcemaps.write('.'))
 		.pipe(gulp.dest(paths.css))
 		.pipe(connect.reload())
 });
@@ -57,3 +60,4 @@ gulp.task('time', function(done) {
 	console.log('\n  ' + d.getHours() + ':' + ('0' + d.getMinutes()).slice(-2) + ':' + ('0' + d.getSeconds()).slice(-2) + '\n');
 	done();
 });
+
