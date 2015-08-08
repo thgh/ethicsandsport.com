@@ -141,6 +141,11 @@ hr {
 	border-color: $line-color;
 }
 
+// Body text image
+img.pull-left {
+	margin-right: 15px;
+}
+
 @media (min-width: $screen-sm-min) {
 	.logo {
 		float: none;

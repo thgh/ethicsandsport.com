@@ -1,38 +1,62 @@
-
-.splitlayout {
+.split {
 	position: relative;
-	height:250px;
-	width: 100%;
 	overflow: hidden;
-  background: $alt-dark;
+	width: 100%;
+	height: 250px;
+	min-height: 250px;
 	color: #fff;
+    word-wrap: break-word;
+	&>.main {
+		position: relative;
+		height: 100%;
+	}
+	button {
+		display: inline-block;
+		margin: .5em 0;
+		width: 65px;
+		height: 65px;
+		border: 1px solid #fff;
+		border-radius: 50%;
+		font-size: 25px;
+		font-weight: 300;
+		font-family: $font-tall;
+		text-transform: uppercase;
+		pointer-events: none;
+		color: #fff;
+		background-color: transparent;
+		&:hover,
+		&:focus {
+			background-color: transparent;
+		}
+	}
 }
+
 
 /* Intro sides */
-.side {
-	position: absolute;
-	top: 0;
-	z-index: 100;
-	width: 50%;
-	height:100%;
+
+.split-intro {
+	z-index: 3;
 	text-align: center;
-	-webkit-backface-visibility: hidden;
+	cursor: pointer;
 }
 
-.open-left .side,
-.open-right .side {
-	cursor: default;
+.page {
+	z-index: 2;
+	text-align: center;
 }
 
-.overlay {
+.split-bg {
+	z-index: 1;
+}
+
+.split-intro,
+.split-bg,
+.page {
 	position: absolute;
 	top: 0;
-	left: 0;
-	z-index: 499;
-	visibility: hidden;
-	width: 100%;
+	overflow: hidden;
+	width: 50%;
 	height: 100%;
-	opacity: 0;
 }
 
 .side-left {
@@ -43,108 +67,58 @@
 	right: 0;
 }
 
+.page.side-left {
+	padding-left: 10%;
+}
+
+.page.side-right {
+	padding-right: 10%;
+}
+
+
 /* Intro content, profile image and name, back button */
-.intro-content {
-	position: absolute;
-	top: 50%;
+
+.split-intro {
+	z-index: 3;
+	background: rgba(0, 0, 0, 0.8);
 	padding: 0 1em;
-	width: 100%;
 	cursor: pointer;
-	-webkit-transform: translateY(-50%) translateX(0);
-	transform: translateY(-50%) translateX(0);
+	/* 	-webkit-transform: translateY(-50%) translateX(0);
+	transform: translateY(-50%) translateX(0); */
 }
 
-.back {
-	position: absolute;
-	bottom:2.5rem;
-	z-index: 500;
-	visibility: hidden;
-	opacity: 0;
-
-	display: block;
-	width: 66px;
-	height: 66px;
-	border-radius: 50%;
-	background: url(../img/sluithome.png) center no-repeat;
-	background-size: contain;
-
-	font-size: 0!important;
-	color: transparent!important;
-}
-
-.mobile-layout .back { /* fixed positioning will make this not clickable after scrolling on some mobile devices */
-	position: absolute;
-}
-
-.back-left {
-	left: 12.5%;
-	-webkit-transform: translateX(-50%);
-	transform: translateX(-50%);
-	&:hover{
+.split {
+	.back {
+		position: absolute;
+		bottom: 10px;
+		z-index: 4;
+		visibility: hidden;
+		opacity: 0;
+		display: block;
+		width: 66px;
+		height: 66px;
+		border-radius: 50%;
+		background-image: url(../img/sluithome.png);
+		background-position: center no-repeat;
+		background-size: contain;
+		font-size: 0!important;
+		color: transparent!important;
+	}
+	.back--left {
+		left: 10px;
 		background-color: $alt-light;
 	}
-}
-
-.back-right {
-	right: 12.5%;
-	-webkit-transform: translateX(50%);
-	transform: translateX(50%);
-	&:hover{
+	.back--right {
+		right: 10px;
 		background-color: $alt-dark;
 	}
 }
 
-.open-right .back-left,
-.open-left .back-right {
-	visibility: visible;
-	opacity: 1;
-	-webkit-transition-delay: 0.3s;
-	transition-delay: 0.3s;
-	pointer-events: auto;
-}
-
-/* Pages */
-.page {
-	position: relative;
-	top: 0;
-	overflow: auto;
-	min-height: 100%;
-	width: 75%;
-	height: auto;
-	-webkit-backface-visibility: hidden;
-	color: #fff;
-	text-align: center;
-}
-
-.page-right {
-	left: 25%;
-	-webkit-transform: translateX(100%);
-	transform: translateX(100%);
-}
-
-.page-left {
-	left: 0;
-	-webkit-transform: translateX(-100%);
-	transform: translateX(-100%);
-}
-
-
-// Sides
-.side-left .overlay {
-	background: rgba(0,0,0,0.7);
-}
-.side-right .overlay {
-	background: rgba(0,0,0,0.3);
-}
-.side-left {
-	background: $alt-light;
-}
-.side-right {
-	background: $alt-dark;
-}
-.intro-content {
+// Intro
+.split-intro {
 	h2 {
 		margin: 0;
+		padding-top: .5em;
 		font-size: 28px;
 		font-weight: 300;
 		line-height: 1.25em;
@@ -154,231 +128,217 @@
 	}
 }
 
-.splitlayout button {
-  display: inline-block;
-  margin:.5em 0;
-  width: 65px;
-  height: 65px;
-  border: 1px solid #fff;
-  border-radius: 50%;
-  font-size: 25px;
-  font-weight: 300;
-  font-family: $font-tall;
-  text-transform: uppercase;
-  pointer-events: none;
-  color: #fff;
-    background: none;
-  &:hover,&:focus{
-    background: none;
-  }
-}
-
 // Pages
-.page-right {
+.page-dark {
 	background: $alt-dark;
-}
-.splitlayout.open-right {
-	background: $alt-light;
-}
-.page-left {
-  background: $alt-light;
 	color: #fff;
 }
-.splitlayout.open-left {
-background: $alt-dark;
+
+.page-light {
+	background: $alt-light;
+	color: #fff;
 }
 
 // Hide MEER button
-.open-left .side-left button,
-.open-right .side-right button{
-  visibility: hidden;
-}
-
+// .open-left .side-left button,
+// .open-right .side-right button {
+// 	visibility: hidden;
+// }
 
 /* All transitions */
-.side,
+
+.split {
+	-webkit-transition: height .3s;
+	transition: height .3s;
+}
+
 .page {
-	-webkit-transition: -webkit-transform 0.6s;
-	transition: transform 0.6s;
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
 }
 
 .overlay {
-	-webkit-transition: opacity 0.6s, visibility 0.1s 0.6s;
-	transition: opacity 0.6s, visibility 0.1s 0.6s;
+	-webkit-transition: opacity 0.3s, visibility 0.1s 0.3s;
+	transition: opacity 0.3s, visibility 0.1s 0.3s;
 }
 
-.intro-content {
-	-webkit-transition: -webkit-transform 0.6s, top 0.6s;
-	transition: transform 0.6s, top 0.6s;
+.split-intro {
+	-webkit-transition: -webkit-transform 0.3s, top 0.3s;
+	transition: transform 0.3s, top 0.3s;
 }
 
-.intro-content h1,
+.split-intro h2,
 .back {
 	-webkit-transition: opacity 0.3s;
 	transition: opacity 0.3s;
 }
 
+
 /* Open and close */
 
-/* We need to set the position and overflow for the respective page scroll */
-.reset-layout .page,
-.splitlayout.open-right .page-left,
-.splitlayout.open-left .page-right,
-.splitlayout.close-right .page-left,
-.splitlayout.close-left .page-right {
-	position: absolute;
-	overflow: hidden;
-	height: 100%;
+.split--right {
+	.split-intro.side-left {
+		transform: translateX(-80%);
+	}
 }
 
-.splitlayout.open-right .page-right,
-.splitlayout.open-left .page-left {
-	position: relative;
-	overflow: auto;
-	height: 100%;
+.split--left {
+	.split-intro.side-right {
+		transform: translateX(80%);
+	}
 }
 
-.open-right .side-left .overlay,
-.open-left .side-right .overlay {
+.split--right .side-left,
+.split--left .side-right {
+	h2,
+	button {
+		opacity: 0.1;
+	}
+}
+
+.split--right .back--right,
+.split--left .back--left {
 	visibility: visible;
-	opacity: 1;
-	-webkit-transition: opacity 0.6s;
-	transition: opacity 0.6s;
+	opacity: 1!important;
+	pointer-events: auto;
 }
+
+
+/* We need to set the position and overflow for the respective page scroll */
+
+// .reset-layout .page,
+// .splitlayout.open-right .page-left,
+// .splitlayout.open-left .page-right,
+// .splitlayout.close-right .page-left,
+// .splitlayout.close-left .page-right {
+// 	position: absolute;
+// 	overflow: hidden;
+// 	height: 100%;
+// }
+// .splitlayout.open-right .page-right,
+// .splitlayout.open-left .page-left {
+// 	position: relative;
+// 	overflow: auto;
+// 	height: 100%;
+// }
+// .open-right .side-left .overlay,
+// .open-left .side-right .overlay {
+// 	visibility: visible;
+// 	opacity: 1;
+// 	-webkit-transition: opacity 0.3s;
+// 	transition: opacity 0.3s;
+// }
 
 /* Right side open */
-.open-right .side-left {
-	-webkit-transform: translateX(-60%);
-	transform: translateX(-60%);
-}
 
-.open-right .side-right {
-	z-index: 200;
-	-webkit-transform: translateX(-150%);
-	transform: translateX(-150%);
-}
-
-.close-right .side-right {
-	z-index: 200;
-}
-
-.open-right .side-right .intro-content {
-	-webkit-transform: translateY(-50%) translateX(25%) scale(0.6);
-	transform: translateY(-50%) translateX(25%) scale(0.6);
-}
-
-.open-right .page-right {
-	-webkit-transform: translateX(0%);
-	transform: translateX(0%);
-}
+// .open-right .side-left {
+// 	-webkit-transform: translateX(-60%);
+// 	transform: translateX(-60%);
+// }
+// .open-right .side-right {
+// 	z-index: 200;
+// 	-webkit-transform: translateX(-150%);
+// 	transform: translateX(-150%);
+// }
+// .close-right .side-right {
+// 	z-index: 200;
+// }
+// .open-right .side-right .intro-content {
+// 	-webkit-transform: translateY(-50%) translateX(25%) scale(0.6);
+// 	transform: translateY(-50%) translateX(25%) scale(0.6);
+// }
+// .open-right .page-right {
+// 	-webkit-transform: translateX(0%);
+// 	transform: translateX(0%);
+// }
 
 /* Left side open */
-.open-left .side-right {
-	-webkit-transform: translateX(60%);
-	transform: translateX(60%);
-}
 
-.open-left .side-left {
-	z-index: 200;
-	-webkit-transform: translateX(150%);
-	transform: translateX(150%);
-}
-
-.close-left .side-left {
-	z-index: 200;
-}
-
-.open-left .side-left .intro-content {
-	-webkit-transform: translateY(-50%) translateX(-25%) scale(0.6);
-	transform: translateY(-50%) translateX(-25%) scale(0.6);
-}
-
-.open-left .codropsheader {
-	opacity: 0;
-	visibility: hidden;
-	-webkit-transition: opacity 0.3s, visibility 0.1s 0.3s;
-	transition: opacity 0.3s, visibility 0.1s 0.3s;
-}
-
-.open-left .page-left {
-	-webkit-transform: translateX(0%);
-	transform: translateX(0%);
-}
+// .open-left .side-right {
+// 	-webkit-transform: translateX(60%);
+// 	transform: translateX(60%);
+// }
+// .open-left .side-left {
+// 	z-index: 200;
+// 	-webkit-transform: translateX(150%);
+// 	transform: translateX(150%);
+// }
+// .close-left .side-left {
+// 	z-index: 200;
+// }
+// .open-left .side-left .intro-content {
+// 	-webkit-transform: translateY(-50%) translateX(-25%) scale(0.6);
+// 	transform: translateY(-50%) translateX(-25%) scale(0.6);
+// }
+// .open-left .codropsheader {
+// 	opacity: 0;
+// 	visibility: hidden;
+// 	-webkit-transition: opacity 0.3s, visibility 0.1s 0.3s;
+// 	transition: opacity 0.3s, visibility 0.1s 0.3s;
+// }
+// .open-left .page-left {
+// 	-webkit-transform: translateX(0%);
+// 	transform: translateX(0%);
+// }
 
 /* Media Queries */
 
-@media screen and (max-width: 49.4375em) {
-	.open-right .side-right {
-		-webkit-transform: translateX(-175%);
-		transform: translateX(-175%);
-	}
-
-	.open-right .side-left {
-		-webkit-transform: translateX(-100%);
-		transform: translateX(-100%);
-	}
-
-	.open-left .side-right {
-		-webkit-transform: translateX(100%);
-		transform: translateX(100%);
-	}
-
-	.open-left .side-left {
-		-webkit-transform: translateX(175%);
-		transform: translateX(175%);
-	}
-
-	.page {
-		width: 100%;
-	}
-
-	.page-right {
-		left: 0;
-		padding-left: 15%;
-	}
-
-	.page-left {
-		padding-right: 15%;
-	}
-
-	.open-right .side-right .intro-content {
-		top: 100%;
-		-webkit-transform: translateY(-150px) scale(0.5);
-		transform: translateY(-150px) scale(0.5);
-	}
-
-	.open-left .side-left .intro-content {
-		top: 100%;
-		-webkit-transform: translateY(-150px) scale(0.5);
-		transform: translateY(-150px) scale(0.5);
-	}
-
-	.open-right .intro-content h1,
-	.open-left .intro-content h1 {
-		opacity: 0;
-	}
-
-	.back-left {
-		left: 6.25%;
-	}
-
-	.back-right {
-		right: 6.25%;
-	}
-  .back{
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    font-size: 16px;
-  }
+@media screen and (min-width: 49.4375em) {
+	// .side {
+	// 	width: 50%;
+	// 	padding: 0 10%;
+	// }
+	// .open-right .side-right {
+	// 	-webkit-transform: translateX(-175%);
+	// 	transform: translateX(-175%);
+	// }
+	// .open-right .side-left {
+	// 	-webkit-transform: translateX(-100%);
+	// 	transform: translateX(-100%);
+	// }
+	// .open-left .side-right {
+	// 	-webkit-transform: translateX(100%);
+	// 	transform: translateX(100%);
+	// }
+	// .open-left .side-left {
+	// 	-webkit-transform: translateX(175%);
+	// 	transform: translateX(175%);
+	// }
+	// .page {
+	// 	width: 100%;
+	// }
+	// .page-right {
+	// 	left: 0;
+	// 	padding-left: 15%;
+	// }
+	// .page-left {
+	// 	padding-right: 15%;
+	// }
+	// .open-right .side-right .intro-content {
+	// 	top: 100%;
+	// 	-webkit-transform: translateY(-150px) scale(0.5);
+	// 	transform: translateY(-150px) scale(0.5);
+	// }
+	// .open-left .side-left .intro-content {
+	// 	top: 100%;
+	// 	-webkit-transform: translateY(-150px) scale(0.5);
+	// 	transform: translateY(-150px) scale(0.5);
+	// }
+	// .open-right .intro-content h1,
+	// .open-left .intro-content h1 {
+	// 	opacity: 0;
+	// }
+	// .back-left {
+	// 	left: 6.25%;
+	// }
+	// .back-right {
+	// 	right: 6.25%;
+	// }
+	// .back {
+	// 	width: 40px;
+	// 	height: 40px;
+	// 	line-height: 40px;
+	// 	font-size: 16px;
+	// }
 }
 
-// Custom
-.splitlayout .thema-list li{
-  padding-bottom: 8px;
-}
-
-.splitlayout .aanpak-list li{
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
