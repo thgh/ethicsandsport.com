@@ -2,6 +2,7 @@
 .home-activities {
 	border-top: 1px solid $line-color;
 }
+
 #home {
 	h2 {
 		text-align: center;
@@ -19,6 +20,7 @@
 		}
 	}
 }
+
 @media (min-width: $screen-sm-min) {
 	.home-activities {
 		border-top: 0;
@@ -31,6 +33,7 @@
 		}
 	}
 }
+
 @media (max-width: $screen-md-max) {
 	.home-tools {
 		border-top: 1px solid #fff;
@@ -45,6 +48,7 @@
 		}
 	}
 }
+
 @media (min-width: $screen-lg-min) {
 	.home-tools {
 		border-top: 0;
@@ -71,6 +75,7 @@
 	background: $alt-light;
 	color: white;
 }
+
 .bg-alt-dark {
 	background: $alt-dark;
 	color: white;
@@ -97,24 +102,6 @@
 	line-height: 18px;
 	font-size: 14px;
 	font-weight: bold;
-	&>time {
-		float: left;
-		width: 64px;
-		text-align: center;
-		line-height: 40px;
-		font-size: 26px;
-		font-family: $font-tall;
-		font-weight: 400;
-		background: $brand-light;
-		b {
-			display: block;
-			line-height: 60px;
-			font-size: 40px;
-			font-weight: 300;
-			background: $brand;
-			color: #fff;
-		}
-	}
 	&>div {
 		margin-left: 64px + 0.6 * $gutter;
 	}
@@ -123,6 +110,32 @@
 	}
 	p {
 		margin-top: 5px;
+	}
+}
+
+.activity__time {
+	float: left;
+	width: 64px;
+	text-align: center;
+	line-height: 40px;
+	font-size: 26px;
+	font-family: $font-tall;
+	font-weight: 400;
+	background: $brand-light;
+	&>b {
+		display: block;
+		line-height: 60px;
+		font-size: 40px;
+		font-weight: 300;
+		background: $brand;
+		color: #fff;
+	}
+}
+
+.activity--past>.activity__time {
+	background: $neutral-light;
+	&>b {
+		background: #888;
 	}
 }
 
@@ -139,3 +152,4 @@
 		height: 300px;
 	}
 }
+

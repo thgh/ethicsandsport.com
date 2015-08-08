@@ -19,7 +19,7 @@
 			<h2>Vormingen</h2>
 			{% for activity in activities.slice('0', '4') %}
 			<a href="vorming-detail.html" class="link-block activity-list-item">
-				<time datetime="{{ activity.date }}">
+				<time datetime="{{ activity.date }}" class="activity__time">
 					<b>{{ activity.date | replace("^(..).*", "$1") }}</b>
 					{{ activity.date | replace("^...(...)..(..).*", "$1$2") }}
 				</time>
@@ -35,8 +35,8 @@
 			{% endfor %}
 			<h2 class="title-past">Voorbije events</h2>
 			{% for activity in activities.slice('0', '2') %}
-			<a class="link-block activity-list-item event-past">
-				<time datetime="{{ activity.date }}">
+			<a class="link-block activity-list-item activity--past">
+				<time datetime="{{ activity.date }}" class="activity__time">
 					<b>{{ activity.date | replace("^(..).*", "$1") }}</b>
 					{{ activity.date | replace("^...(...)..(..).*", "$1$2") }}
 				</time>
