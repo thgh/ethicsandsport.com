@@ -1,9 +1,11 @@
 .tabs-2 {
 	@include clearfix;
 	position: relative;
-	&>.tab {
+	.tab {
 		float: left;
 		width: 50%;
+		position: relative;
+		z-index: 1;
 	}
 	.tab-title {
 		display: block;
@@ -18,7 +20,7 @@
 		cursor: pointer;
 	}
 	.tab-content {
-		transition: max-height 0.6s;
+		transition: max-height 0.3s;
 		max-height: 0;
 		position: absolute;
 		z-index: 1;
@@ -32,7 +34,15 @@
 			color: #fff;
 		}
 	}
+	&>.tabs-bg {
+		position: absolute;
+		top: 0;
+		overflow: hidden;
+		width: 50%;
+		height: 100%;
+	}
 }
+
 .tab-active {
 	.tab-content {
 		z-index: 2;
@@ -52,3 +62,4 @@
 		}
 	}
 }
+
