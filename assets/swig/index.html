@@ -61,7 +61,7 @@
 			<div class="container divider-top">
 				{% for activity in activities.slice('0', '3') %}
 				<a class="link-block activity-list-item">
-					<time datetime="{{ activity.date }}" class="activity_time">
+					<time datetime="{{ activity.date }}" class="activity__time">
 						<b>{{ activity.date | replace("^(..).*", "$1") }}</b>
 						{{ activity.date | replace("^...(...)..(..).*", "$1$2") }}
 					</time>
