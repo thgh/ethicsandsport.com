@@ -87,7 +87,9 @@
 }
 
 .a--more{
+	display: block;
 	color: $alt-shadow;
+	margin-bottom: $gutter;
 	&:hover{
 		color: $alt-light;
 	}
