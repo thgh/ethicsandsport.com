@@ -53,3 +53,17 @@ forEach(tags, function(index, elem) {
 		window.location.href = href;
 	});
 });
+
+// Tools submenu
+var tools = $('#Tools');
+var qt = $('.quicktools');
+if (tools&&qt) {
+	tools.addEventListener('mouseenter', function(event) {
+		classie.add(qt, 'active');
+		qt.style.height = $('.quicktools li').clientHeight + 'px';
+	});
+	tools.addEventListener('mouseleave', function(event) {
+		classie.remove(qt, 'active');
+		qt.style.height = 0;
+	});
+}

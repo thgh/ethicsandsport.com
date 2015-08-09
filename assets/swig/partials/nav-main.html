@@ -5,7 +5,19 @@
 			{%- if item.url==page -%}
 			<a class="active" href="{{ item.url }}">{{ item.text }}</a>
 			{%- else -%}
-			<a href="{{ item.url }}">{{ item.text }}</a>{%- endif -%}
+			<a id="{{item.text}}" href="{{ item.url }}">{{ item.text }}</a>{%- endif -%}
+		</li>
+		{% endfor %}
+	</ul>
+	<ul class="quicktools">
+		{% for item in tools %}
+		<li>
+			<a href="#" class="link-block">
+				<figure>
+					<img alt="" height="200px" src="{{ item.picture }}" width="300px"/>
+				</figure>
+				<p>{{ item.title }}</p>
+			</a>
 		</li>
 		{% endfor %}
 	</ul>

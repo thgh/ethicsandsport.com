@@ -1,0 +1,28 @@
+.quicktools {
+	transition: height .3s .3s;
+	position: absolute;
+	z-index: 6;
+	background: #eee;
+	height: 0;
+	overflow: hidden;
+	&>li {
+		float: left;
+		width: 25%;
+		&>a {
+			font-size: 14px;
+			line-height: 20px;
+			font-family: Lato;
+			text-transform: none;
+			color: #000;
+			font-weight: 400;
+			border-bottom: 0;
+		}
+	}
+	&.active {
+		transition: height .3s;
+	}
+	&:hover {
+		height: auto;
+	}
+}
+

@@ -24,12 +24,6 @@
 		border-top: 0;
 		border-left: 1px solid $line-color;
 	}
-	.home-news,
-	.home-activities {
-		h2 {
-			text-align: left;
-		}
-	}
 }
 
 @media (max-width: $screen-md-max) {
