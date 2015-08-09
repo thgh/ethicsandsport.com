@@ -1,6 +1,14 @@
 'use strict';
 
 var $ = document.querySelector.bind(document);
+var $$ = document.querySelectorAll.bind(document);
+
+var forEach = function(array, callback, scope) {
+	if (array)
+		for (var i = 0; i < array.length; i++) {
+			callback.call(scope, i, array[i]);
+		}
+};
 
 // Mobile navigation toggle
 var navToggle = function() {
@@ -31,3 +39,17 @@ if (tabs) {
 		}
 	});
 }
+
+// Tags inside a tags
+var tags = $$('.list--tags');
+forEach(tags, function(index, elem) {
+	console.log(elem)
+	elem.addEventListener('click', function(event) {
+		event.stopPropagation();
+		event.preventDefault();
+		var href = event.target.dataset.href;
+		console.log(event.target)
+		if (!href) return;
+		window.location.href = href;
+	});
+});
