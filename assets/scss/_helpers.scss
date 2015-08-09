@@ -83,7 +83,9 @@
 .abs-topright{
 	position: absolute;
 	right: 0;
-	top:0;
+	top: 0;
+	height: 60px;
+	overflow: hidden;
 }
 
 .a--more{
