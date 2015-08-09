@@ -5,12 +5,12 @@
 	height: 250px;
 	min-height: 250px;
 	color: #fff;
-    word-wrap: break-word;
 	&>.main {
 		position: relative;
 		height: 100%;
 	}
 	button {
+		transition:opacity .3s;
 		display: inline-block;
 		margin: .5em 0;
 		width: 65px;
@@ -192,7 +192,14 @@
 .split--left .side-right {
 	h2,
 	button {
-		opacity: 0.1;
+		opacity: 0;
+	}
+}
+
+.split--right .side-right,
+.split--left .side-left {
+	button {
+		opacity: 0;
 	}
 }
 

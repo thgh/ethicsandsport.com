@@ -15,14 +15,21 @@
 		leftPage = split.querySelector('.page.side-left .list'),
 		rightPage = split.querySelector('.page.side-right .list');
 
+	function back(page) {
+		if (!classie.has(split, page)) return false;
+		classie.remove(split, page);
+		split.style.height = '250px';
+		return true;
+	}
+
 	function openLeft() {
-		classie.remove(split, 'split--right');
+		if (back('split--right')) return;
 		classie.add(split, 'split--left');
 		split.style.height = rightPage.clientHeight + 'px';
 	}
 
 	function openRight() {
-		classie.remove(split, 'split--left');
+		if (back('split--left')) return;
 		classie.add(split, 'split--right');
 		split.style.height = leftPage.clientHeight + 'px';
 	}
