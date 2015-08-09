@@ -85,3 +85,15 @@
 	right: 0;
 	top:0;
 }
+
+.a--more{
+	color: $alt-shadow;
+	&:hover{
+		color: $alt-light;
+	}
+	&::before{
+		display: inline-block;
+		content: url("../img/bullet_driehoek.png");
+		width: 10px;
+	}
+}
