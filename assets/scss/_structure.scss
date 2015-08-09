@@ -118,9 +118,10 @@
 .aside {
 	margin-bottom: 2 * $gutter;
 	padding: 0 $gutter;
+	position: relative;
 	h2, h4 {
-		margin-top: 0;
-		padding-top: 0.83em;
+		margin: 0;
+		padding-top: 1.5em;
 	}
 	ul {
 		padding-left: 20px;
@@ -294,6 +295,9 @@
 	}
 	.aside section+section {
 		border-top: 0;
+	}
+	.home-tools h2 {
+		text-align: center;
 	}
 }
 
