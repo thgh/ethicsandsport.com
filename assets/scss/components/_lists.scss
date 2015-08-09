@@ -15,6 +15,28 @@ $list-padding-driehoek: 37px;
 		}
 	}
 }
+
+.list--inline {
+	padding: 10px 0 10px 20px;
+	li {
+		font-size: 14px;
+		float: left;
+		padding-right: 30px;
+		padding-left: 0;
+	}
+}
+
+.list--tags {
+	padding-left: 0;
+	li {
+		padding: 5px 10px;
+		margin-right: 10px;
+		list-style-type: none;
+		background: $alt-light;
+		color: #fff;
+	}
+}
+
 .list--thema {
 	padding-left: $list-padding-vink;
 	li {
@@ -22,11 +44,13 @@ $list-padding-driehoek: 37px;
 		list-style-image: url("../img/bullet_vink.png");
 	}
 }
+
 .list--thema.list--white {
 	li {
 		list-style-image: url("../img/bullet_vink_white.png");
 	}
 }
+
 .list--aanpak {
 	padding-left: $list-padding-roadmap;
 	li {
@@ -57,11 +81,11 @@ $list-padding-driehoek: 37px;
 		}
 	}
 }
-.list--aanpak.list--white {
-	li {
 
-	}
+.list--aanpak.list--white {
+	li {}
 }
+
 .list--act {
 	padding-left: $list-padding-driehoek;
 	li {
@@ -69,12 +93,4 @@ $list-padding-driehoek: 37px;
 		list-style-image: url("../img/bullet_driehoek.png");
 	}
 }
-.list--inline {
-	padding: 10px 0 10px 20px;
-	li {
-		font-size: 14px;
-		float: left;
-		padding-right: 30px;
-		padding-left: 0;
-	}
-}
+
