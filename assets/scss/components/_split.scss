@@ -38,6 +38,7 @@
 	z-index: 3;
 	text-align: center;
 	cursor: pointer;
+	@include user-select(none);
 }
 
 .page {

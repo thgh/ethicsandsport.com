@@ -6,7 +6,7 @@
 	font-size: 23px;
 	font-family: $font-tall;
 	svg {
-		display: block;
+		display: inline-block;
 		margin: 0 $gutter;
 	}
 	path {
@@ -34,3 +34,16 @@
 	}
 }
 
+.paging--aanpak{
+	height: 90px;
+	&>a{
+		color: $alt-light;
+		text-transform: uppercase;
+	}
+	&>.paging__prev{
+		float: left;
+	}
+	&>.paging__next{
+		float: right;
+	}
+}

@@ -82,8 +82,50 @@ $list-padding-driehoek: 37px;
 	}
 }
 
-.list--aanpak.list--white {
-	li {}
+.list--road {
+	padding-left: 0!important;
+	li {
+		padding-left: 30px;
+		list-style-type: none;
+		position: relative;
+		font-size: 18px;
+		text-transform: uppercase;
+		font-family: $font-tall;
+		color: $brand;
+		counter-increment: section;
+		&::before {
+			content: ' ';
+			content: counter(section);
+			position: absolute;
+			z-index: 2;
+			top: 7px;
+			left: 0;
+			width: 20px;
+			height: 20px;
+			font-size: 12px;
+			line-height: 20px;
+			color: #fff;
+			text-align: center;
+			border-radius: 50%;
+			background: $alt-dark;
+		}
+		&::after {
+			content: ' ';
+			position: absolute;
+			top: $gutter/4 + 23px/2;
+			bottom: -$gutter/4 - 23px/2;
+			left: 8px;
+			width: 3px;
+			background:$alt-dark;
+		}
+		&:last-child::after {
+			display: none;
+		}
+		&:hover::before,
+		&.active::before{
+			background: $brand;
+		}
+	}
 }
 
 .list--act {

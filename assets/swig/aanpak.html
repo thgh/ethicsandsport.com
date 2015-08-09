@@ -1,0 +1,109 @@
+{% set page = "thema-en-aanpak.html" %}
+
+{% extends "partials/layout.html" %}
+
+{% block content %}
+{% include "partials/tabs.html" %}
+<div class="divider-bottom">
+	<ol class="breadcrumb main">
+		<li>
+			<a href="/">Home</a>
+		</li>
+		<li>
+			<a href="thema-en-aanpak.html">Thema's en aanpakken</a>
+		</li>
+		<li>
+			Een aanpak
+		</li>
+	</ol>
+</div>
+<main class="main clearfix">
+	<article class="article has-aside-lg">
+		<div class="article-content">
+			<h2>Thema's</h2>
+			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.
+				Mauris placerat eleifend leo.</p>
+
+			<p>
+				<strong>Pellentesque habitant morbi tristique</strong>
+				senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
+				<em>Aenean ultricies mi vitae est.</em>
+				Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac
+					dui.
+				<a href="#">Donec non enim</a>
+				in turpis pulvinar facilisis. Ut felis.
+			</p>
+
+			<ol>
+				<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+				<li>Aliquam tincidunt mauris eu risus.</li>
+			</ol>
+
+			<h3>Header Level 3</h3>
+
+			<p>
+				<img class="pull-left" src="http://placehold.it/300x200">
+				Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.
+					Mauris placerat eleifend leo.
+				<strong>Pellentesque habitant morbi tristique</strong>
+				senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam,
+			</p>
+
+			<h4>Header Level 4</h4>
+
+			<ul>
+				<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+				<li>Aliquam tincidunt mauris eu risus.</li>
+			</ul>
+
+			<p>
+				Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.
+					Mauris placerat eleifend leo.
+			</p>
+
+		</div>
+		<footer class="paging paging--aanpak">
+			<a href="#" class="paging__prev paging--disabled">
+				<svg height="50" stroke="#ccc" width="30" viewBox="0 0 30 50" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="5" stroke-linecap="round">
+					<path d="M25 5 L5 25 L25 45" />
+				</svg>
+				Vorige aanpak
+			</a>
+			<a href="#" class="paging__next">
+				Volgende aanpak
+				<svg height="50" stroke="#ccc" width="30" viewBox="0 0 30 50" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="5" stroke-linecap="round">
+					<path d="M5 5 L25 25 L5 45" />
+				</svg>
+			</a>
+		</footer>
+	</article>
+	<aside class="aside aside-lg article-aside">
+		<div class="grid-tablet-2">
+			<a class="btn btn--alt btn--icon btn--layers" href="#">
+				Pak het
+				<strong>structureel</strong>aan
+			</a>
+			<a class="btn btn--alt btn--icon btn--head visible-sm visible-md" href="#">
+				Inspireer je door
+				<strong>onze thema's</strong>
+			</a>
+		</div>
+		<div class="grid-tablet-2">
+			<section>
+				<ul class="list list--road">
+					{% for a in aanpakken %}
+					<li>
+						<a href="#">
+							{{ a.title }}</a>
+					</li>
+					{% endfor %}
+				</ul>
+			</section>
+		</div>
+		<a class="btn btn--alt btn--icon btn--cone visible-xs visible-lg" href="#">
+			Stuur ons je eigen
+			<strong>praktijkvoorbeeld</strong>
+		</a>
+	</aside>
+</main>
+{% endblock %}
